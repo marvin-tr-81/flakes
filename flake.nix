@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = { nixpkgs, ... } @ inputs: {
@@ -13,6 +13,7 @@
       modules = [
         ./hosts/marvin-framework/configuration.nix
         ./nixosModules
+        inputs.nixos-hardware.nixosModules.framework-11th-gen-intel
       ];
     };
   };
