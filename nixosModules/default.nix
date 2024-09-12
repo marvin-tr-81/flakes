@@ -5,6 +5,7 @@
     ./guiapps.nix
     ./cliapps.nix
     ./systemapps.nix
+    ./home-manager.nix
     ./systemConfigurations
   ];
 }
