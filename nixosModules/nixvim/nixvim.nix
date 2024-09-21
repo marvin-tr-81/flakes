@@ -1,5 +1,8 @@
+{ pkgs, inputs, ... }:
+
 {
   imports = [
+    inputs.nixvim.nixosModules.nixvim
     ./opts.nix
     ./plugins
   ];

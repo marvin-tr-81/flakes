@@ -1,4 +1,6 @@
-{ pkgs, lib, nixvim, ... }: {
+{ ... }:
+
+{
   imports = [
     ./users.nix
     ./hyprland.nix
@@ -7,6 +9,7 @@
     ./systemapps.nix
     ./home-manager.nix
     ./nixvim/nixvim.nix
+#    ./stylix.nix
     ./systemConfigurations
   ];
 }

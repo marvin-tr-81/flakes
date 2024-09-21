@@ -10,6 +10,9 @@
       ./hardware-configuration.nix
     ];
 
+  #stylix.enable = true;
+  #stylix.image = ./wallpaper.png;
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -70,7 +73,7 @@
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    jack.enable = true;
+  #  jack.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
