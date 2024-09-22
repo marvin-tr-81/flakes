@@ -3,5 +3,6 @@
 { ... }: {
   imports = [
     ./zramswap.nix
+    ./bluetooth.nix
   ];
 }

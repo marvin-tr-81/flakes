@@ -16,13 +16,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-#    stylix = {
-#      url = "github:danth/stylix";
-#      inputs.nixpkgs.follows = "nixpkgs";
-#    };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, ... } @ inputs: {
     
     nixosConfigurations.marvin-framework = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
@@ -35,7 +35,10 @@
 
     homeConfigurations.marvin = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      modules = [ ./home-manager/home.nix ];
+      modules = [
+        ./home-manager/home.nix
+        stylix.homeManagerModules.stylix
+      ];
     };
   };
 }
