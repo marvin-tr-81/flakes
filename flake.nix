@@ -31,6 +31,7 @@
         ./nixosModules
         inputs.nixos-hardware.nixosModules.framework-11th-gen-intel
         home-manager.nixosModules.home-manager
+        stylix.nixosModules.stylix
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
