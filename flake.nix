@@ -31,13 +31,13 @@
         ./nixosModules
         inputs.nixos-hardware.nixosModules.framework-11th-gen-intel
         home-manager.nixosModules.home-manager
-#        stylix.nixosModules.stylix
+        stylix.nixosModules.stylix
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.marvin.imports = [
             ./home-manager/home.nix
-            stylix.homeManagerModules.stylix
+#            stylix.homeManagerModules.stylix
           ];
         }
       ];
