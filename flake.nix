@@ -30,15 +30,23 @@
         ./hosts/marvin-framework/configuration.nix
         ./nixosModules
         inputs.nixos-hardware.nixosModules.framework-11th-gen-intel
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.marvin.imports = [
+            ./home-manager/home.nix
+            stylix.homeManagerModules.stylix
+          ];
+        }
       ];
-    };
 
-    homeConfigurations.marvin = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      modules = [
-        ./home-manager/home.nix
-        stylix.homeManagerModules.stylix
-      ];
+#    homeConfigurations.marvin = home-manager.lib.homeManagerConfiguration {
+#      pkgs = nixpkgs.legacyPackages."x86_64-linux";
+#      modules = [
+#        ./home-manager/home.nix
+#        stylix.homeManagerModules.stylix
+#      ];
     };
   };
 }

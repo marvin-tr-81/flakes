@@ -10,17 +10,17 @@
   stylix.autoEnable = true;
 
 #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
-  stylix.cursor.size = 18;
+  stylix.cursor.size = 20;
 
   stylix.fonts = {
     monospace = {
       package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-      name = "JetBrainsMono Nerd Font Mono NL";
+      name = "JetBrainsMono Nerd Font Mono";
     };
     sansSerif = {
       package = pkgs.dejavu_fonts;
@@ -32,12 +32,18 @@
     };
   };
   
-  stylix.targets.nixvim.enable = true;
-  stylix.targets.dunst.enable = true;
+  stylix.targets = { 
+    nixvim.enable = true;
+    dunst.enable = true;
+    hyprland.enable = true;
+  };
+
 
   programs.bash.enable = true;
   programs.kitty.enable = true;
   programs.btop.enable = true;
+#  programs.nixvim.enable = true;
+#  programs.hyprland.enable = true;
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
