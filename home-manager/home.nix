@@ -1,49 +1,12 @@
 { config, pkgs, ... }:
 
 {
-#  stylix.enable = true;
-#  stylix.image = pkgs.fetchurl {
-#    url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
-#    sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
-#  };
-
-#  stylix.autoEnable = true;
-
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-
-#  stylix.cursor.package = pkgs.bibata-cursors;
-#  stylix.cursor.name = "Bibata-Modern-Ice";
-#  stylix.cursor.size = 20;
-#
-#  stylix.fonts = {
-#    monospace = {
-#      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-#      name = "JetBrainsMono Nerd Font Mono";
-#    };
-#    sansSerif = {
-#      package = pkgs.dejavu_fonts;
-#      name = "DejaVu Sans";
-#    };
-#    serif = {
-#      package = pkgs.dejavu_fonts;
-#      name = "DejaVu Serif";
-#    };
-#  };
-  
-#  stylix.targets = { 
-#    nixvim.enable = true;
-#    dunst.enable = true;
-#    hyprland.enable = true;
-#  };
-
-
-  programs.bash.enable = true;
-  programs.kitty.enable = true;
-  programs.btop.enable = true;
-#  programs.nixvim.enable = true;
-#  programs.hyprland.enable = true;
+  programs = {
+    bash.enable = true;
+    kitty.enable = true;
+    btop.enable = true;
+#    systemd-boot.enable = true;
+  };
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

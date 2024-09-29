@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./stylix.nix
     ./users.nix
     ./hyprland.nix
     ./guiapps.nix
@@ -9,7 +10,6 @@
     ./systemapps.nix
     ./home-manager.nix
     ./nixvim/nixvim.nix
-#    ./stylix.nix
     ./systemConfigurations
   ];
 }

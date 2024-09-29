@@ -2,6 +2,7 @@
   description = "marvin's flake";
 
   inputs = {
+
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager = {
@@ -20,12 +21,13 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+  
   };
 
   outputs = { nixpkgs, home-manager, stylix, ... } @ inputs: {
     
     nixosConfigurations.marvin-framework = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs ; };
       modules = [
         ./hosts/marvin-framework/configuration.nix
         ./nixosModules
@@ -35,19 +37,13 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
           home-manager.users.marvin.imports = [
             ./home-manager/home.nix
-#            stylix.homeManagerModules.stylix
           ];
         }
       ];
-
-#    homeConfigurations.marvin = home-manager.lib.homeManagerConfiguration {
-#      pkgs = nixpkgs.legacyPackages."x86_64-linux";
-#      modules = [
-#        ./home-manager/home.nix
-#        stylix.homeManagerModules.stylix
-#      ];
     };
+
   };
 }
