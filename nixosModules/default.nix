@@ -11,5 +11,6 @@
     ./home-manager.nix
     ./nixvim/nixvim.nix
     ./systemConfigurations
+    ./LaTeX.nix
   ];
 }

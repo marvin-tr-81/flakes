@@ -20,7 +20,7 @@
   stylix.fonts = {
     monospace = {
       package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-      name = "JetBrainsMono Nerd Font Mono";
+      name = "JetBrainsMonoNL Nerd Font Mono";
     };
     sansSerif = {
       package = pkgs.dejavu_fonts;
