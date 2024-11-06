@@ -12,5 +12,7 @@
     ./nixvim/nixvim.nix
     ./systemConfigurations
     ./LaTeX.nix
+    ./services.nix
+    ./Python312.nix
   ];
 }
