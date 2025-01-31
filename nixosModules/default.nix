@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./nixvim
     ./stylix.nix
     ./users.nix
     ./hyprland.nix
@@ -9,7 +10,6 @@
     ./cliapps.nix
     ./systemapps.nix
     ./home-manager.nix
-    ./nixvim/nixvim.nix
     ./systemConfigurations
     ./LaTeX.nix
     ./services.nix

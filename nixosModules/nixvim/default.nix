@@ -3,7 +3,7 @@
 {
   imports = [
     inputs.nixvim.nixosModules.nixvim
-    ./opts.nix
+    ./core
     ./plugins
   ];
 
