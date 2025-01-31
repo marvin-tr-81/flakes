@@ -1,8 +1,13 @@
+{ self, ... }:
+
 {
+
   imports = [
-    ./lualine.nix
-    ./bufferline.nix
-    ./web-devicons.nix
+    ./tmux-navigator.nix
+    #./lualine.nix
+    #./bufferline.nix
+    #./web-devicons.nix
     #./lightline.nix
   ];
+
 }
