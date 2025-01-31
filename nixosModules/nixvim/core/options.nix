@@ -1,6 +1,11 @@
 {
   programs.nixvim = {
 
+    globals =
+      {
+        netrw_liststyle = 3;
+      };
+
     opts = {
 
       relativenumber = true;
@@ -13,6 +18,7 @@
       shiftwidth = 2;
       expandtab = true;
       autoindent = true;
+
     };
   };
 }
