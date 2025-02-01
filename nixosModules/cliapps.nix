@@ -3,5 +3,6 @@
     btop
     htop
     fastfetch
+    ripgrep
   ];
 }
