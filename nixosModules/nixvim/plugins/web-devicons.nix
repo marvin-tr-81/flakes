@@ -1,7 +1,9 @@
 {
-  programs.nixvim.plugins.web-devicons = {
+
+  plugins.web-devicons = {
 
     enable = true;
 
   };
+
 }

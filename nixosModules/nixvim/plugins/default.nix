@@ -1,13 +1,10 @@
-{ self, ... }:
-
 {
-
   imports = [
+    ./web-devicons.nix
     ./tmux-navigator.nix
+    ./nvim-tree.nix
     #./lualine.nix
     #./bufferline.nix
-    #./web-devicons.nix
     #./lightline.nix
   ];
-
 }
