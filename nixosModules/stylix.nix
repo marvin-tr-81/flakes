@@ -18,10 +18,10 @@
   stylix.cursor.size = 22;
 
   stylix.fonts = {
-    #    monospace = {
-      #      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-      #     name = "JetBrainsMonoNL Nerd Font Mono";
-    #};
+    monospace = {
+      package = pkgs.nerdfonts.JetBrainsMono;
+      name = "JetBrainsMonoNL Nerd Font Mono";
+    };
     sansSerif = {
       package = pkgs.dejavu_fonts;
       name = "DejaVu Sans";
