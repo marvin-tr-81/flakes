@@ -12,6 +12,7 @@
     ./lualine.nix
     ./dressing.nix
     ./treesitter.nix
+    ./indent-blankline.nix
     #./lightline.nix
 
   ];
