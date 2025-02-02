@@ -11,6 +11,7 @@
     ./bufferline.nix
     ./lualine.nix
     ./dressing.nix
+    ./treesitter.nix
     #./lightline.nix
 
   ];
