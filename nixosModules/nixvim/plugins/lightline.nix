@@ -1,7 +1,9 @@
 {
-  programs.nixvim.plugins.lightline = {
+
+  plugins.lightline = {
 
     enable = true;
 
   };
+
 }

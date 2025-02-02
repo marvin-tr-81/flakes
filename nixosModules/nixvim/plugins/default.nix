@@ -9,7 +9,7 @@
     ./telescope.nix
     ./auto-session.nix
     ./bufferline.nix
-    #./lualine.nix
+    ./lualine.nix
     #./lightline.nix
 
   ];
