@@ -2,6 +2,7 @@
 
   imports = [
 
+    ./lz-n.nix    # required for Lazy Loading
     ./web-devicons.nix
     ./tmux-navigator.nix
     ./nvim-tree.nix
