@@ -1,7 +1,14 @@
 {
-  programs.nixvim.plugins.bufferline = {
+
+  plugins.bufferline = {
 
     enable = true;
 
+    settings.options = {
+      mode = "tabs";
+      separator_style = "slant";
+    };
+
   };
+
 }

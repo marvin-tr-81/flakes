@@ -8,8 +8,8 @@
     ./which-key.nix
     ./telescope.nix
     ./auto-session.nix
+    ./bufferline.nix
     #./lualine.nix
-    #./bufferline.nix
     #./lightline.nix
 
   ];
