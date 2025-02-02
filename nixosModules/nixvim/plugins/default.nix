@@ -10,6 +10,7 @@
     ./auto-session.nix
     ./bufferline.nix
     ./lualine.nix
+    ./dressing.nix
     #./lightline.nix
 
   ];
