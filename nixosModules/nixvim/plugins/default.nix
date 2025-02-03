@@ -15,6 +15,7 @@
     ./treesitter.nix
     ./indent-blankline.nix
     ./cmp.nix               # completion
+    ./nvim-autopairs.nix
     #./lightline.nix
 
   ];
