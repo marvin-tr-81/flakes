@@ -14,6 +14,7 @@
     ./dressing.nix
     ./treesitter.nix
     ./indent-blankline.nix
+    ./cmp.nix               # completion
     #./lightline.nix
 
   ];
