@@ -17,6 +17,7 @@
     ./cmp.nix               # completion
     ./nvim-autopairs.nix
     ./comment.nix
+    ./nvim-surround.nix
     #./lightline.nix
 
   ];
