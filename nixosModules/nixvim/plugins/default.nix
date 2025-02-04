@@ -16,6 +16,7 @@
     ./indent-blankline.nix
     ./cmp.nix               # completion
     ./nvim-autopairs.nix
+    ./comment.nix
     #./lightline.nix
 
   ];
