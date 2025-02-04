@@ -42,6 +42,7 @@
             ./home-manager/home.nix
           ];
         }
+        inputs.nixvim.nixosModules.nixvim
       ];
     };
 
