@@ -18,6 +18,7 @@
     ./nvim-autopairs.nix
     ./comment.nix
     ./nvim-surround.nix
+    ./lsp.nix
     #./lightline.nix
 
   ];
