@@ -19,6 +19,7 @@
     ./comment.nix
     ./nvim-surround.nix
     ./lsp.nix
+    ./conform-nvim.nix
     #./lightline.nix
 
   ];

@@ -1,18 +1,27 @@
-{ self, inputs, ... }:
+{ pkgs, ... }:
 
 {
 
-  programs.nixvim = {
+  programs.nixvim =
 
-    enable = true;
+    {
 
-    imports = [
-      ./core
-      ./plugins
-    ];
+      enable = true;
 
-    #colorschemes.gruvbox.enable = true;
-    defaultEditor = true;
-  };
+      imports = [
+        ./core
+        ./plugins
+      ];
+
+      #colorschemes.gruvbox.enable = true;
+      defaultEditor = true;
+    };
+
+  # Formatters and linters
+  environment.systemPackages = with pkgs; [
+    ruff # python
+    nixfmt-rfc-style # nix
+    tex-fmt # latex
+  ];
 
 }
