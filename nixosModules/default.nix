@@ -14,5 +14,6 @@
     ./LaTeX.nix
     ./services.nix
     ./Python312.nix
+    ./Python313.nix
   ];
 }
