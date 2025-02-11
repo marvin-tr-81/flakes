@@ -1,8 +1,9 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    (python312.withPackages (
+    (python313.withPackages (
       ps: with ps; [
+        tkinter
         numpy
         scipy
         jupyterlab

@@ -1,4 +1,3 @@
-{ services, ... } : 
 {
   services = {
     syncthing = {

@@ -21,30 +21,33 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  
+
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... } @ inputs: {
-    
-    nixosConfigurations.marvin-framework = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs ; };
-      modules = [
-        ./hosts/marvin-framework/configuration.nix
-        ./nixosModules
-        inputs.nixos-hardware.nixosModules.framework-11th-gen-intel
-        home-manager.nixosModules.home-manager
-        stylix.nixosModules.stylix
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.users.marvin.imports = [
-            ./home-manager/home.nix
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      stylix,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.marvin-framework = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        system = "x86_64-linux";
+        modules =
+          with inputs;
+          [
+            home-manager.nixosModules.home-manager
+            nixos-hardware.nixosModules.framework-11th-gen-intel
+            nixvim.nixosModules.nixvim
+            stylix.nixosModules.stylix
+          ]
+          ++ [
+            ./hosts/marvin-framework/configuration.nix
+            ./modules
+            ./home-manager
           ];
-        }
-        inputs.nixvim.nixosModules.nixvim
-      ];
+      };
     };
-
-  };
 }
