@@ -24,7 +24,7 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
-      size = 22;
+      size = 24;
     };
 
     fonts = {
@@ -39,6 +39,10 @@
       serif = {
         package = pkgs.dejavu_fonts;
         name = "DejaVu Serif";
+      };
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
       };
 
     };

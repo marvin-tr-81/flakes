@@ -5,8 +5,9 @@
     bash.enable = true;
     kitty.enable = true;
     btop.enable = true;
-#    nixvim.enable = true;
-#    systemd-boot.enable = true;
+    ghostty.enable = true;
+    #    nixvim.enable = true;
+    #    systemd-boot.enable = true;
   };
 
   # Home Manager needs a bit of information about you and the paths it should
