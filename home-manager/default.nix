@@ -5,6 +5,9 @@
     backupFileExtension = "backup";
     users.marvin.imports = [
       ./home.nix
+      ./ghostty
+      ./btop
+      ./hyprland
     ];
   };
 }

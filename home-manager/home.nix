@@ -4,8 +4,8 @@
   programs = {
     bash.enable = true;
     kitty.enable = true;
-    btop.enable = true;
-    ghostty.enable = true;
+    # btop.enable = true;
+    # ghostty.enable = true;
     #    nixvim.enable = true;
     #    systemd-boot.enable = true;
   };
