@@ -1,8 +1,14 @@
 # users.nix
-
+{ pkgs, ... }:
 {
-  users.users.marvin = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
+  users = {
+
+    defaultUserShell = pkgs.zsh;
+
+    users.marvin = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" ];
+    };
+
   };
 }

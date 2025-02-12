@@ -11,5 +11,6 @@
     ./hyprland.nix
     ./home-manager.nix
     ./services
+    ./zsh.nix
   ];
 }

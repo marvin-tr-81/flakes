@@ -8,6 +8,7 @@
       ./ghostty
       ./btop
       ./hyprland
+      ./zsh
     ];
   };
 }
