@@ -1,3 +1,4 @@
+{ config, ... }:
 {
 
   programs.zsh = {
@@ -5,7 +6,6 @@
     enable = true;
 
     enableCompletion = true;
-    # enableAutosuggestions = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
@@ -15,7 +15,11 @@
 
       v = "nvim";
       ff = "fastfetch";
+
     };
+
+    history.size = 1000;
+    history.path = "${config.xdg.dataHome}/zsh/history";
 
   };
 

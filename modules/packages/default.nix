@@ -6,5 +6,6 @@
     ./LaTeX.nix
     ./python3.nix
     ./formatters.nix
+    ./starship.nix
   ];
 }

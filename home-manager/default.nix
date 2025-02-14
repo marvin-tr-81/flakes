@@ -9,6 +9,7 @@
       ./btop
       ./hyprland
       ./zsh
+      ./starship.nix
     ];
   };
 }
