@@ -28,16 +28,27 @@
           "$git_status"
           "$fill"
           "$nix_shell"
-          "$python"
-          "$jobs"
+          # "$python"
+          # "$jobs"
           "$cmd_duration"
-          "$time"
+          # "$time"
           "$line_break"
           "$character"
         ];
 
         os = {
           disabled = false;
+        };
+
+        git_branch = {
+          format = "[$symbol$branch(:$remote_branch)]($style) ";
+        };
+
+        directory = {
+          truncate_to_repo = false;
+          truncation_length = 5;
+          truncation_symbol = "…/";
+
         };
 
         cmd_duration = {
