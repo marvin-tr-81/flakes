@@ -12,5 +12,6 @@
     ./home-manager.nix
     ./services
     ./zsh.nix
+    ./virt-manager.nix
   ];
 }

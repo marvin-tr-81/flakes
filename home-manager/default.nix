@@ -10,6 +10,7 @@
       ./hyprland
       ./zsh
       ./starship.nix
+      ./virt-manager.nix
     ];
   };
 }

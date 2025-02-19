@@ -7,7 +7,10 @@
 
     users.marvin = {
       isNormalUser = true;
-      extraGroups = [ "wheel" ];
+      extraGroups = [
+        "wheel"
+        "libvirtd"
+      ];
     };
 
   };
