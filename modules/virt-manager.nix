@@ -20,7 +20,10 @@
     spiceUSBRedirection.enable = true;
   };
 
-  services.spice-vdagentd.enable = true;
+  services = {
+    spice-vdagentd.enable = true;
+    qemuGuest.enable = true;
+  };
 
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 
