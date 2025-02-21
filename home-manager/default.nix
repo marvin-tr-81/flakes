@@ -12,7 +12,8 @@
       ./zsh
       ./starship.nix
       ./virt-manager.nix
-      ./rofi-wayland.nix
+      ./yazi.nix
+      # ./rofi-wayland.nix
     ];
   };
 }
