@@ -5,12 +5,14 @@
     backupFileExtension = "backup";
     users.marvin.imports = [
       ./home.nix
+      ./stylix.nix
       ./ghostty
       ./btop
       ./hyprland
       ./zsh
       ./starship.nix
       ./virt-manager.nix
+      ./rofi-wayland.nix
     ];
   };
 }
