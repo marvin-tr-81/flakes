@@ -32,6 +32,7 @@
           # "$jobs"
           "$cmd_duration"
           # "$time"
+          "$battery"
           "$line_break"
           "$character"
         ];
@@ -52,12 +53,25 @@
         };
 
         cmd_duration = {
-          format = "[$duration]($style) ";
+          format = "[ $duration]($style) ";
         };
 
         time = {
           disabled = false;
-          format = "[󱑀$time]($style) ";
+          format = "[󱑀 $time]($style) ";
+        };
+
+        battery = {
+          display = [
+            {
+              threshold = 20;
+              style = "bold red";
+            }
+            {
+              threshold = 40;
+              style = "bold yellow";
+            }
+          ];
         };
 
       }
