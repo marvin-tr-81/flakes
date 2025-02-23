@@ -5,6 +5,7 @@
     playerctl
     dunst
     libnotify
-    rofi-wayland
+    # rofi-wayland
+    fuzzel
   ];
 }

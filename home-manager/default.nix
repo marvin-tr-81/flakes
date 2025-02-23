@@ -14,6 +14,7 @@
       ./virt-manager.nix
       ./yazi.nix
       # ./rofi-wayland.nix
+      ./fuzzel.nix
     ];
   };
 }
