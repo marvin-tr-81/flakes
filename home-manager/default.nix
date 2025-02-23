@@ -15,6 +15,7 @@
       ./yazi.nix
       # ./rofi-wayland.nix
       ./fuzzel.nix
+      ./zathura.nix
     ];
   };
 }
