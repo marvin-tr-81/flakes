@@ -13,8 +13,12 @@
       ll = "ls -l";
       la = "ls -la";
 
-      v = "nvim";
+      o = "xdg-open";
+
+      nv = "nvim";
       ff = "fastfetch";
+
+      charge-limit = "sudo framework_tool --charge-limit";
 
     };
 

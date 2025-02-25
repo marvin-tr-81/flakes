@@ -7,5 +7,6 @@
     ./python3.nix
     ./formatters.nix
     ./starship.nix
+    ./framework-tool.nix
   ];
 }
