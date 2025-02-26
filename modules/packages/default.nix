@@ -1,4 +1,6 @@
 {
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ./cliapps.nix
     ./guiapps.nix
@@ -8,5 +10,6 @@
     ./formatters.nix
     ./starship.nix
     ./framework-tool.nix
+    ./keymapp.nix
   ];
 }
