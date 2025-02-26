@@ -9,7 +9,10 @@
         extraDefCfg = "process-unmapped-keys yes";
         config = ''
           (defsrc
-           caps a s d f j k l ; x .
+           caps
+           a s d f
+           j k l ;
+           x . c ,
           )
           (defvar
            tap-time 150
@@ -27,10 +30,12 @@
            ; (tap-hold $tap-time $hold-time ; rmet)
            x (tap-hold $tap-time $hold-time x ralt)
            . (tap-hold $tap-time $hold-time . ralt)
+           c (tap-hold $tap-time $hold-time c (multi lsft ralt))
+           , (tap-hold $tap-time $hold-time , (multi rsft ralt))
           )
 
           (deflayer base
-           @caps @a  @s  @d  @f  @j  @k  @l  @; @x @.
+           @caps @a  @s  @d  @f  @j  @k  @l  @; @x @. @c @,
           )
         '';
       };
