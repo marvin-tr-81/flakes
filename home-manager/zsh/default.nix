@@ -1,5 +1,6 @@
 { config, ... }:
 {
+  # DO NOT FORGET TO SOURCE .ZSHRC AFTER EDITING
 
   programs.zsh = {
 
@@ -24,6 +25,11 @@
 
     history.size = 1000;
     history.path = "${config.xdg.dataHome}/zsh/history";
+
+    initExtra = ''
+      bindkey -v '^H' backward-delete-char
+      bindkey -v '^?' backward-delete-char
+    '';
 
   };
 
