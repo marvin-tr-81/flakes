@@ -13,5 +13,6 @@
     ./services
     ./zsh.nix
     ./virt-manager.nix
+    ./kanata.nix
   ];
 }
