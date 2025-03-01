@@ -1,5 +1,12 @@
 {
 
+  clipboard = {
+
+    register = "unnamedplus";
+    providers.wl-copy.enable = true;
+
+  };
+
   globals = {
 
     netrw_liststyle = 3;
@@ -35,9 +42,6 @@
 
     # backspace
     backspace = "indent,eol,start";
-
-    # clipboard
-    clipboard.register = "unnamedplus";
 
     # split window
     splitright = true;
