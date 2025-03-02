@@ -48,6 +48,10 @@
         name = "Noto Color Emoji";
       };
 
+      sizes = {
+        terminal = 13;
+      };
+
     };
 
   };
