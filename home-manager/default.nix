@@ -21,6 +21,7 @@
       ./fuzzel.nix
       ./zathura.nix
       ./tmux.nix
+      ./dunst.nix
 
     ];
   };
