@@ -1,8 +1,12 @@
 {
   home-manager = {
+
     useGlobalPkgs = true;
+
     useUserPackages = true;
+
     backupFileExtension = "backup";
+
     users.marvin.imports = [
       ./home.nix
       ./stylix.nix
@@ -16,6 +20,8 @@
       # ./rofi-wayland.nix
       ./fuzzel.nix
       ./zathura.nix
+      ./tmux.nix
+
     ];
   };
 }

@@ -15,5 +15,6 @@
     ./virt-manager.nix
     ./kanata.nix
     ./zsa.nix
+    ./tmux.nix
   ];
 }
