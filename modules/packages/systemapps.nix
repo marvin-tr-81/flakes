@@ -7,5 +7,6 @@
     libnotify
     # rofi-wayland
     fuzzel
+    pwvucontrol
   ];
 }
