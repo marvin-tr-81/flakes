@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.tmux = {
 
@@ -9,6 +11,14 @@
     keyMode = "vi";
     baseIndex = 1;
     clock24 = true;
+    escapeTime = 0;
+    historyLimit = 5000;
+
+    plugins = with pkgs.tmuxPlugins; [
+      vim-tmux-navigator
+      resurrect
+      continuum
+    ];
 
     extraConfig = ''
 
@@ -16,6 +26,9 @@
       set -g set-clipboard on
       set -g status-interval 3
       set -g detach-on-destroy on
+
+      # Allow programs in the pane to bypass tmux (e.g. for image preview)
+      set -g allow-passthrough on
 
       # Refresh tmux config with r
       unbind r
@@ -53,6 +66,17 @@
 
       # Automatically renumber windows when one is closed
       set -g renumber-windows on
+
+      # Resurrect and continuum plugin settings
+      set -g @resurrect-capture-pane-contents 'on'
+      set -g @continuum-restore 'on'
+
+      # Statusbar settings
+      set -g status-justify centre
+      set -g status-right-length 200 # default: 10
+      set -g status-left-length 200  # default: 10
+      set -g window-status-current-format "#I:#W"
+      set -g window-status-last-style "bg=default"
 
     '';
   };
