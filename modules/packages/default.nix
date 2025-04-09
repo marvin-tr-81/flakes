@@ -1,5 +1,4 @@
 {
-  nixpkgs.config.allowUnfree = true;
 
   imports = [
     ./cliapps.nix
@@ -12,4 +11,5 @@
     ./framework-tool.nix
     ./keymapp.nix
   ];
+
 }
