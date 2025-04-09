@@ -4,14 +4,12 @@
     ./packages
     ./nixvim
     ./services
+    ./programs
+    ./virtualization
     ./stylix.nix
     ./users.nix
     ./hyprland.nix
     ./services
-    ./zsh.nix
-    ./virt-manager.nix
-    ./kanata.nix
     ./zsa.nix
-    ./tmux.nix
   ];
 }
