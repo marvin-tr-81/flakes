@@ -1,5 +1,9 @@
 {
 
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   imports = [
     ./cliapps.nix
     ./guiapps.nix
