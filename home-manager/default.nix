@@ -22,6 +22,7 @@
       ./zathura.nix
       ./tmux.nix
       ./dunst.nix
+      ./mangohud.nix
 
     ];
   };
