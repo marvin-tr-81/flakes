@@ -14,6 +14,7 @@
     ./starship.nix
     ./framework-tool.nix
     ./keymapp.nix
+    ./libreoffice.nix
   ];
 
 }
