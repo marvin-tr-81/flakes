@@ -36,8 +36,5 @@
       sensitivity = -0.5;
     };
 
-    binds = {
-      disable_keybind_grabbing = true;
-    };
   };
 }

@@ -8,6 +8,10 @@
     # See https://wiki.hyprland.org/Configuring/Keywords/
     "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
 
+    binds = {
+      disable_keybind_grabbing = true;
+    };
+
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "$mainMod, RETURN, exec, $terminal"
