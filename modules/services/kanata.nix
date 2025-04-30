@@ -15,10 +15,10 @@
 
         config = ''
           (defsrc
-           caps < `
+           caps <
            a s d f
            j k l ;
-           x . c ,
+           w o e i
           )
 
           (defvar
@@ -29,23 +29,22 @@
           (defalias
            caps esc
            < `
-           ` =
-           a (tap-hold $tap-time $hold-time a lmet)
-           s (tap-hold $tap-time $hold-time s lalt)
+           a (tap-hold $tap-time $hold-time a lalt)
+           s (tap-hold $tap-time $hold-time s lmet)
            d (tap-hold $tap-time $hold-time d lsft)
            f (tap-hold $tap-time $hold-time f lctl)
            j (tap-hold $tap-time $hold-time j rctl)
            k (tap-hold $tap-time $hold-time k rsft)
-           l (tap-hold $tap-time $hold-time l lalt)
-           ; (tap-hold $tap-time $hold-time ; rmet)
-           x (tap-hold $tap-time $hold-time x ralt)
-           . (tap-hold $tap-time $hold-time . ralt)
-           c (tap-hold $tap-time $hold-time c (multi lsft ralt))
-           , (tap-hold $tap-time $hold-time , (multi rsft ralt))
+           l (tap-hold $tap-time $hold-time l rmet)
+           ; (tap-hold $tap-time $hold-time ; lalt)
+           w (tap-hold $tap-time $hold-time w ralt)
+           o (tap-hold $tap-time $hold-time o ralt)
+           e (tap-hold $tap-time $hold-time e (multi lsft ralt))
+           i (tap-hold $tap-time $hold-time i (multi rsft ralt))
           )
 
           (deflayer base
-           @caps @< @` @a  @s  @d  @f  @j  @k  @l  @; @x @. @c @,
+           @caps @< @a  @s  @d  @f  @j  @k  @l  @; @w @o @e @i
           )
         '';
 
