@@ -26,7 +26,7 @@
     history.size = 1000;
     history.path = "${config.xdg.dataHome}/zsh/history";
 
-    initExtra = ''
+    initContent = ''
       bindkey -v '^H' backward-delete-char
       bindkey -v '^?' backward-delete-char
     '';
