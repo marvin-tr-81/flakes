@@ -1,7 +1,7 @@
 {
 
   plugins = {
-    
+
     ts-autotag = {
 
       enable = true;
@@ -12,7 +12,10 @@
 
       enable = true;
 
-      lazyLoad.settings.event = [ "BufReadPre" "BufNewFile" ];
+      lazyLoad.settings.event = [
+        # "BufReadPre"
+        "BufNewFile"
+      ];
 
       settings = {
 
@@ -21,7 +24,7 @@
         indent.enable = true;
 
         ensure_installed = "all";
-        
+
         incremental_selection = {
           enable = true;
           keymaps = {
