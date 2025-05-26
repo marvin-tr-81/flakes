@@ -2,9 +2,6 @@
 {
   programs.mangohud = {
 
-    enable = true;
-    enableSessionWide = true;
-
     settings = {
       font_size = lib.mkForce 24;
       font_scale = lib.mkForce 1.0;
