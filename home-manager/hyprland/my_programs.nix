@@ -8,7 +8,7 @@
     # See https://wiki.hyprland.org/Configuring/Keywords/
 
     # Set programs that you use
-    "$terminal" = "ghostty";
+    "$terminal" = "kitty";
     "$fileManager" = "dolphin";
     "$menu" = "fuzzel";
 
