@@ -6,6 +6,8 @@
 
     enable = true;
 
+    dotDir = ".config/zsh";
+
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
@@ -14,7 +16,7 @@
       ll = "ls -l";
       la = "ls -la";
 
-      o = "xdg-open";
+      open = "xdg-open";
 
       nv = "nvim";
       ff = "fastfetch";
