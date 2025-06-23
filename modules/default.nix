@@ -12,5 +12,6 @@
     ./hyprland.nix
     ./services
     ./zsa.nix
+    ./nix.nix
   ];
 }
