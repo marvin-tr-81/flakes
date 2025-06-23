@@ -2,45 +2,56 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, stylix,... }:
+{
+  config,
+  lib,
+  pkgs,
+  stylix,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
-#  stylix.enable = true;
-#  stylix.image = pkgs.fetchurl {
-#    url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
-#    sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
-#  };
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-#  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
-
+  #  stylix.enable = true;
+  #  stylix.image = pkgs.fetchurl {
+  #    url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
+  #    sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
+  #  };
+  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Suspend to RAM (deep) rather than `s2idle`
-  boot.kernelParams =  [ "mem_sleep_default=deep" ];
+  # boot.kernelParams =  [ "mem_sleep_default=deep" ];
 
   fileSystems = {
     "/".options = [ "compress=zstd" ];
     "/home".options = [ "compress=zstd" ];
-    "/nix".options = [ "compress=zstd" "noatime" ];
-  };  
+    "/nix".options = [
+      "compress=zstd"
+      "noatime"
+    ];
+  };
 
   networking.hostName = "marvin-framework"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Enable Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Set your time zone.
   time.timeZone = "Europe/Istanbul";
@@ -63,8 +74,6 @@
   # Enable Firmware Update
   services.fwupd.enable = true;
 
-  
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -81,7 +90,7 @@
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-  #  jack.enable = true;
+    #  jack.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -120,7 +129,10 @@
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22000 ];
-  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+  networking.firewall.allowedUDPPorts = [
+    22000
+    21027
+  ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
@@ -149,4 +161,3 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-
