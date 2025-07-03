@@ -6,7 +6,6 @@
   config,
   lib,
   pkgs,
-  stylix,
   ...
 }:
 
@@ -16,22 +15,15 @@
     ./hardware-configuration.nix
   ];
 
-  #  stylix.enable = true;
-  #  stylix.image = pkgs.fetchurl {
-  #    url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
-  #    sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
-  #  };
-  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
-  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-  #  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Suspend to RAM (deep) rather than `s2idle`
-  # boot.kernelParams =  [ "mem_sleep_default=deep" ];
+  # kernel parameters
+  boot.kernelParams = [
+    "mem_sleep_default=s2idle"
+    "nvme.noacpi=1"
+  ];
 
   fileSystems = {
     "/".options = [ "compress=zstd" ];
