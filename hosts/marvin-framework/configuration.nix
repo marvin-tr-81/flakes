@@ -19,6 +19,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # kernel package
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # kernel parameters
   boot.kernelParams = [
     "mem_sleep_default=s2idle"
