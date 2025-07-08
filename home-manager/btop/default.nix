@@ -5,6 +5,7 @@
 
     settings = {
       vim_keys = true;
+      disks_filter = "/ /boot";
     };
 
   };
