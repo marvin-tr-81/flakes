@@ -16,27 +16,37 @@
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "$mainMod, RETURN, exec, $terminal"
       "$mainMod, Q, killactive,"
-      # bind = $mainMod, M, exit,
-      "$mainMod, E, exec, $fileManager"
-      "$mainMod, V, togglefloating,"
       "$mainMod, SPACE, exec, $menu"
-      "$mainMod, P, pseudo, # dwindle"
-      "$mainMod, O, togglesplit, # dwindle"
-      "$mainMod, I, exec, $internet"
+      # bind = $mainMod, M, exit,
+      # "$mainMod, E, exec, $fileManager"
+      # "$mainMod, I, exec, $internet"
 
-      # Toggle opaque
-      "$mainMod, G, setprop, active opaque toggle"
+      "$mainMod, F, togglefloating,"
+      "$mainMod, P, pin,"
+      "$mainMod, D, pseudo, # dwindle"
+      "$mainMod, A, togglesplit, # dwindle"
+      "$mainMod, O, setprop, active opaque toggle"
 
       # Show battery level
-      "$mainMod, B, exec, notify-send $(cat /sys/class/power_supply/BAT1/capacity_level) $(cat /sys/class/power_supply/BAT1/capacity) -h int:value:$(cat /sys/class/power_supply/BAT1/capacity)"
+      # "$mainMod, B, exec, notify-send $(cat /sys/class/power_supply/BAT1/capacity_level) $(cat /sys/class/power_supply/BAT1/capacity) -h int:value:$(cat /sys/class/power_supply/BAT1/capacity)"
       # Show time
-      "$mainMod, T, exec, notify-send \"`date +%F`\" \"`date +%T`\""
+      # "$mainMod, T, exec, notify-send \"`date +%F`\" \"`date +%T`\""
 
       # Move focus with mainMod + vim motion
       "$mainMod, H, movefocus, l"
       "$mainMod, L, movefocus, r"
       "$mainMod, K, movefocus, u"
       "$mainMod, J, movefocus, d"
+
+      # Swap window with mainMod + SHIFT + vim motion
+      "$mainMod SHIFT, H, swapwindow, l"
+      "$mainMod SHIFT, L, swapwindow, r"
+      "$mainMod SHIFT, K, swapwindow, u"
+      "$mainMod SHIFT, J, swapwindow, d"
+
+      # Maximize active window
+      "$mainMod, M, fullscreen, 1"
+      "$mainMod SHIFT, M, fullscreen, 0"
 
       # Switch workspaces with mainMod + [0-9]
       "$mainMod, 1, workspace, 1"
@@ -69,6 +79,24 @@
       # Scroll through existing workspaces with mainMod + scroll
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
+
+      # Scroll through existing workspaces with mainMod + SHIFT + CTRL + vim motion
+      "$mainMod SHIFT CTRL, h, workspace, e-1"
+      "$mainMod SHIFT CTRL, l, workspace, e+1"
+    ];
+
+    binde = [
+      # Resize window with mainMod + CTRL + vim motion
+      "$mainMod CTRL, h, resizeactive, -10 0"
+      "$mainMod CTRL, j, resizeactive, 0 10"
+      "$mainMod CTRL, k, resizeactive, 0 -10"
+      "$mainMod CTRL, l, resizeactive, 10 0"
+
+      # Move window with mainMod + ALT + vim motion
+      "$mainMod ALT, h, moveactive, -25 0"
+      "$mainMod ALT, j, moveactive, 0 25"
+      "$mainMod ALT, k, moveactive, 0 -25"
+      "$mainMod ALT, l, moveactive, 25 0"
     ];
 
     bindm = [

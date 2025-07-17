@@ -9,7 +9,7 @@
 
     # Set programs that you use
     "$terminal" = "kitty";
-    "$fileManager" = "dolphin";
+    # "$fileManager" = "dolphin";
     "$menu" = "fuzzel";
 
   };

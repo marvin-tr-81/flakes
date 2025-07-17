@@ -21,5 +21,15 @@
 
     ];
 
+    windowrulev2 = [
+
+      # float Youtube Picture in picture
+      "float, title:^(Picture-in-Picture)$"
+
+      # pin Youtube Picture in picture
+      "pin, title:^(Picture-in-Picture)$"
+
+    ];
+
   };
 }
