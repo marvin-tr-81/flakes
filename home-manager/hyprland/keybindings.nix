@@ -81,8 +81,8 @@
       "$mainMod, mouse_up, workspace, e-1"
 
       # Scroll through existing workspaces with mainMod + SHIFT + CTRL + vim motion
-      "$mainMod SHIFT CTRL, h, workspace, e-1"
-      "$mainMod SHIFT CTRL, l, workspace, e+1"
+      "$mainMod, tab, workspace, e+1"
+      "$mainMod SHIFT, tab, workspace, e-1"
     ];
 
     binde = [
