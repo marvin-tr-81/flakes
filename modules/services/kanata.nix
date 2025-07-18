@@ -62,11 +62,18 @@
             lctl  lmet  lalt    spc     ralt  rctl
           )
 
+          (defalias
+            ;; sys layer aliases
+            ◀◀  (tap-hold $tap-time $hold-time ◀◀ lmet)
+            ▶⏸  (tap-hold $tap-time $hold-time ▶⏸ lsft)
+            ▶▶  (tap-hold $tap-time $hold-time ▶▶ lctl)
+            )
+
           (deflayer sys
             esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 del
             @grv 1  2  3  4  5  6  7  8  9  0  -  =  bspc
             tab  q  🔇 🔉 🔊 🔆  ⇤  ⇟  ⇞  ⇥  p  [  ]  ret
-            caps  a  ◀◀ ▶⏸ ▶▶ 🔅  ◀  ▼  ▲  ▶   ;  '  \
+            @caps @a @◀◀ @▶⏸ @▶▶ 🔅  ◀  ▼  ▲  ▶   ;  '  \
             lsft < z  x  c  v  b  n  m  ,  .  /     rsft
             lctl  lmet  lalt    spc     ralt  rctl
           )
