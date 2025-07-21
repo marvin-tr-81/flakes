@@ -6,6 +6,8 @@
 
       enable = true;
 
+      colorschemes.catppuccin.enable = true;
+
       imports = [
         ./core
         ./plugins

@@ -17,6 +17,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin.url = "github:catppuccin/nix";
+
     # stylix = {
     # url = "github:danth/stylix";
     # inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +43,12 @@
             home-manager.nixosModules.home-manager
             nixos-hardware.nixosModules.framework-11th-gen-intel
             nixvim.nixosModules.nixvim
+            catppuccin.nixosModules.catppuccin
+            {
+              home-manager.users.marvin.imports = [
+                catppuccin.homeModules.catppuccin
+              ];
+            }
             # stylix.nixosModules.stylix
           ]
           ++ [

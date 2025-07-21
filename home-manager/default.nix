@@ -23,6 +23,7 @@
       ./tmux.nix
       ./dunst.nix
       ./mangohud.nix
+      ./catppuccin.nix
 
     ];
   };

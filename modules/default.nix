@@ -12,5 +12,6 @@
     ./hyprland.nix
     ./services
     ./nix.nix
+    ./catppuccin.nix
   ];
 }
