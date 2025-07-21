@@ -9,7 +9,7 @@
 
     users.marvin.imports = [
       ./home.nix
-      ./stylix.nix
+      # ./stylix.nix
       ./ghostty
       ./btop
       ./hyprland

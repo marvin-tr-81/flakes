@@ -17,10 +17,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # stylix = {
+    # url = "github:danth/stylix";
+    # inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
   };
 
@@ -28,7 +28,7 @@
     {
       nixpkgs,
       home-manager,
-      stylix,
+      # stylix,
       ...
     }@inputs:
     {
@@ -41,7 +41,7 @@
             home-manager.nixosModules.home-manager
             nixos-hardware.nixosModules.framework-11th-gen-intel
             nixvim.nixosModules.nixvim
-            stylix.nixosModules.stylix
+            # stylix.nixosModules.stylix
           ]
           ++ [
             ./hosts/marvin-framework/configuration.nix

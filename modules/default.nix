@@ -7,7 +7,7 @@
     ./programs
     ./virtualization
     ./gaming
-    ./stylix.nix
+    # ./stylix.nix
     ./users.nix
     ./hyprland.nix
     ./services
