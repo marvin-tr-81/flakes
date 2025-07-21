@@ -25,7 +25,6 @@
   # kernel parameters
   boot.kernelParams = [
     "mem_sleep_default=s2idle"
-    "nvme.noacpi=1"
   ];
 
   fileSystems = {

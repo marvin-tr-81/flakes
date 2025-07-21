@@ -12,7 +12,6 @@
     ./python3.nix
     ./formatters.nix
     ./starship.nix
-    ./framework-tool.nix
     ./keymapp.nix
     ./libreoffice.nix
   ];
