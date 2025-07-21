@@ -5,5 +5,6 @@
   imports = [
     ./zramswap.nix
     ./bluetooth.nix
+    ./zsa.nix
   ];
 }
