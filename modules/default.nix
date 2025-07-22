@@ -13,5 +13,6 @@
     ./services
     ./nix.nix
     ./catppuccin.nix
+    ./fonts.nix
   ];
 }
