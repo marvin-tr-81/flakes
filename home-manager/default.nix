@@ -24,6 +24,7 @@
       ./dunst.nix
       ./mangohud.nix
       ./catppuccin.nix
+      ./pointerCursor.nix
 
     ];
   };
