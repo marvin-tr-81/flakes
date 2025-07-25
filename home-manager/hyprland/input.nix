@@ -12,7 +12,7 @@
       kb_variant = "alt";
       # kb_model =
       # kb_options = caps:escape, shift:both_capslock
-      # kb_options = "shift:both_capslock";
+      kb_options = "shift:both_capslock";
       # kb_rules =
 
       follow_mouse = 1;
