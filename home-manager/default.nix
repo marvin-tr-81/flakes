@@ -25,6 +25,7 @@
       ./mangohud.nix
       ./catppuccin.nix
       ./pointerCursor.nix
+      ./gtk.nix
 
     ];
   };

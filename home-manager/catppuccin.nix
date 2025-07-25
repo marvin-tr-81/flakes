@@ -5,5 +5,7 @@
 
     flavor = "frappe";
 
+    gtk.enable = true;
+
   };
 }
