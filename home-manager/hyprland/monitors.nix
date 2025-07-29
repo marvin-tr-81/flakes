@@ -7,7 +7,7 @@
 
     # See https://wiki.hyprland.org/Configuring/Monitors/
     monitor = [
-      ",highres,auto,1"
+      ",highres,auto,2"
     ];
 
   };
