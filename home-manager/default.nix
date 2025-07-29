@@ -26,6 +26,7 @@
       ./catppuccin.nix
       ./pointerCursor.nix
       ./gtk.nix
+      ./kitty.nix
 
     ];
   };
