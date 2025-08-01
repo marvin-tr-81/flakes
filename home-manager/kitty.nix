@@ -3,10 +3,10 @@
 
     enable = true;
 
-    font = {
-      size = 20;
-      name = "mono";
-    };
+    # font = {
+    # size = 20;
+    # name = "mono";
+    # };
 
   };
 }
