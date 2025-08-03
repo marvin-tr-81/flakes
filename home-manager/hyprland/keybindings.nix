@@ -108,7 +108,7 @@
     bindl = [
       # lid close/open events
       ", switch:on:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, disable\""
-      ", switch:off:Lid Switch, exec, hyprctl keyword monitor \"eDP-1,highres,auto,2\""
+      ", switch:off:Lid Switch, exec, hyprctl keyword monitor \"eDP-1,highres,auto,1\""
     ];
 
     bindle = [
