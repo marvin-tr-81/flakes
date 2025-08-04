@@ -5,6 +5,7 @@
 
     settings = {
       font-size = 20;
+      window-padding-balance = true;
     };
   };
 }
