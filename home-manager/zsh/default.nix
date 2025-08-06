@@ -13,8 +13,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ll = "ls -l";
-      la = "ls -la";
+      ll = "ls -lh";
+      la = "ls -lha";
 
       open = "xdg-open";
 
@@ -25,7 +25,7 @@
 
     };
 
-    history.size = 1000;
+    history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";
 
     initContent = ''
