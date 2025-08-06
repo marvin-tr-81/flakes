@@ -54,4 +54,27 @@
 
   };
 
+  diagnostic.settings = {
+    severity_sort = true;
+    signs = {
+      text = {
+        "__rawKey__vim.diagnostic.severity.ERROR" = "";
+        "__rawKey__vim.diagnostic.severity.WARN" = "";
+        "__rawKey__vim.diagnostic.severity.HINT" = "";
+        "__rawKey__vim.diagnostic.severity.INFO" = "󰌶";
+      };
+    };
+    underline = {
+      severity.__raw = ''vim.diagnostic.severity.ERROR'';
+    };
+    virtual_lines = {
+      current_line = true;
+    };
+    virtual_text = {
+      spacing = 2;
+      source = "if_many";
+      prefix = "●";
+    };
+  };
+
 }

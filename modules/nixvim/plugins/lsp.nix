@@ -17,11 +17,4 @@
 
   };
 
-  extraConfigVim = ''
-    sign define DiagnosticSignError text=
-    sign define DiagnosticSignWarn text=
-    sign define DiagnosticSignHint text=󰠠
-    sign define DiagnosticSignInfo text=
-  '';
-
 }
