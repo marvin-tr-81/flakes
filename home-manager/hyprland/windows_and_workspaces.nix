@@ -24,13 +24,16 @@
     windowrulev2 = [
 
       # float Youtube Picture in picture
-      "float, title:^(Picture-in-Picture)$"
+      "float, title:Picture-in-Picture$"
 
       # pin Youtube Picture in picture
-      "pin, title:^(Picture-in-Picture)$"
+      "pin, title:Picture-in-Picture$"
 
-      # hyprbars nobar
+      # hyprbars nobar except dosbox-staging
       "plugin:hyprbars:nobar, class:negative:org.dosbox-staging.dosbox-staging"
+
+      # float dosbox-staging
+      "float, class:org.dosbox-staging.dosbox-staging"
 
     ];
 
