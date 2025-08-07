@@ -30,7 +30,7 @@
       "pin, title:^(Picture-in-Picture)$"
 
       # hyprbars nobar
-      "plugin:hyprbars:nobar, class:.*"
+      "plugin:hyprbars:nobar, class:negative:org.dosbox-staging.dosbox-staging"
 
     ];
 
