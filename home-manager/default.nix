@@ -27,6 +27,7 @@
       ./pointerCursor.nix
       ./gtk.nix
       ./kitty.nix
+      ./services
 
     ];
   };

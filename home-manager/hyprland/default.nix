@@ -6,7 +6,6 @@
   };
 
   imports = [
-    ./plugins
     ./monitors.nix
     ./my_programs.nix
     ./autostart.nix
