@@ -1,11 +1,18 @@
+{ pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
 
     enable = true;
 
+    plugins = [
+      pkgs.hyprlandPlugins.hyprbars
+    ];
+
   };
 
   imports = [
+
+    ./plugins
     ./monitors.nix
     ./my_programs.nix
     ./autostart.nix
@@ -14,6 +21,7 @@
     ./input.nix
     ./keybindings.nix
     ./windows_and_workspaces.nix
+
   ];
 
 }

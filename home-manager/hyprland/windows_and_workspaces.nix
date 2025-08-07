@@ -29,6 +29,9 @@
       # pin Youtube Picture in picture
       "pin, title:^(Picture-in-Picture)$"
 
+      # hyprbars nobar
+      # "plugin:hyprbars:nobar, class:.*"
+
     ];
 
   };
