@@ -4,16 +4,28 @@
   gtk = {
     enable = true;
 
-    # theme = {
-    #   name = "Catppuccin-Frappe";
-    #   package = pkgs.catppuccin-gtk.override {
-    #     accents = [ "mauve" ];
-    #     tweaks = [ ];
-    #     variant = "frappe";
-    #   };
-    # };
-
+    theme = {
+      name = "Graphite-Dark";
+      package = pkgs.graphite-gtk-theme.override {
+        tweaks = [ "darker" ];
+        # themeVariants = [ "pink" ];
+        # colorVariants = [ "dark" ];
+      };
+    };
+    gtk3.extraConfig.Settings = ''gtk-application-prefer-dark-themes=1'';
+    gtk4.extraConfig.Settings = ''gtk-application-prefer-dark-themes=1'';
   };
+
+  # theme = {
+  #   name = "Catppuccin-Frappe";
+  #   package = pkgs.catppuccin-gtk.override {
+  #     accents = [ "mauve" ];
+  #     tweaks = [ ];
+  #     variant = "frappe";
+  #   };
+  # };
+
+  # };
 
   # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
   # xdg.configFile = {
