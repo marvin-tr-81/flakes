@@ -1,15 +1,22 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
 
   gtk = {
     enable = true;
 
     theme = {
-      name = "Graphite-Dark";
-      package = pkgs.graphite-gtk-theme.override {
-        tweaks = [ "darker" ];
-        # themeVariants = [ "pink" ];
-        # colorVariants = [ "dark" ];
+      # name = "Graphite-Dark";
+      # package = pkgs.graphite-gtk-theme.override {
+      # tweaks = [ "darker" ];
+      # themeVariants = [ "pink" ];
+      # colorVariants = [ "dark" ];
+      # };
+      name = "catppuccin-mocha-blue-compact+default";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "blue" ];
+        size = "compact";
+        tweaks = [ "black" ];
+        variant = "mocha";
       };
     };
     gtk3.extraConfig.Settings = ''gtk-application-prefer-dark-themes=1'';
