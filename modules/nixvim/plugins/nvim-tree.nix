@@ -6,30 +6,34 @@
   };
 
   plugins.nvim-tree = {
-    
+
     enable = true;
 
-    view = {
-      width = 35;
-      relativenumber = true;
-    };
+    settings = {
 
-    renderer = {
-      indentMarkers.enable = true;
-      icons.glyphs.folder = {
-        arrowClosed = ""; # arrow when folder is closed
-        arrowOpen = ""; # arrow when folder is open
+      view = {
+        width = 35;
+        relativenumber = true;
       };
-    };
 
-    actions.windowPicker.enable = false;
-    filters.custom = [ ".DS_Store" ];
-    git.ignore = false;
+      renderer = {
+        indentMarkers.enable = true;
+        icons.glyphs.folder = {
+          arrowClosed = ""; # arrow when folder is closed
+          arrowOpen = ""; # arrow when folder is open
+        };
+      };
+
+      actions.windowPicker.enable = false;
+      filters.custom = [ ".DS_Store" ];
+      git.ignore = false;
+
+    };
 
   };
 
   keymaps = [
-    
+
     {
       mode = "n";
       action = "<cmd>NvimTreeToggle<CR>";

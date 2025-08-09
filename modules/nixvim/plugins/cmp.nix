@@ -14,7 +14,7 @@
 
         completion.completeopt = "menu,menuone,preview,noselect";
 
-        mapping= {
+        mapping = {
           __raw = ''
             cmp.mapping.preset.insert({
               ['<C-k>'] = cmp.mapping.select_prev_item(), -- previous suggestion
