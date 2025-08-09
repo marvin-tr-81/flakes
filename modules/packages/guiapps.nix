@@ -7,5 +7,6 @@
     zathura
     tor-browser
     sweethome3d.application
+    qbittorrent
   ];
 }
