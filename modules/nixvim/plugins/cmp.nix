@@ -42,9 +42,9 @@
 
     lspkind = {
       enable = true;
-      cmp = {
-        ellipsisChar = "...";
-        maxWidth = 50;
+      settings.cmp = {
+        ellipsis_char = "...";
+        max_width = 50;
       };
     };
 
