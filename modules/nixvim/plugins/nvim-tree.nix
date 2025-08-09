@@ -16,15 +16,15 @@
         relativenumber = true;
       };
 
-      renderer = {
-        indentMarkers.enable = true;
-        icons.glyphs.folder = {
-          arrowClosed = ""; # arrow when folder is closed
-          arrowOpen = ""; # arrow when folder is open
-        };
-      };
+      # renderer = {
+      #   indentMarkers.enable = true;
+      #   icons.glyphs.folder = {
+      #     arrowClosed = ""; # arrow when folder is closed
+      #     arrowOpen = ""; # arrow when folder is open
+      #   };
+      # };
 
-      actions.windowPicker.enable = false;
+      # actions.windowPicker.enable = false;
       filters.custom = [ ".DS_Store" ];
       git.ignore = false;
 
