@@ -28,6 +28,7 @@
       ./gtk.nix
       ./kitty.nix
       ./services
+      ./qt.nix
 
     ];
   };
