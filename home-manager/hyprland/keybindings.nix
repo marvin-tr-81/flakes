@@ -16,7 +16,7 @@
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "$mainMod, RETURN, exec, $terminal"
       "$mainMod, Q, killactive,"
-      "$mainMod, SPACE, exec, $menu"
+      "$mainMod, BACKSPACE, exec, $menu"
       # bind = $mainMod, M, exit,
       # "$mainMod, E, exec, $fileManager"
       # "$mainMod, I, exec, $internet"
