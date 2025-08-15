@@ -24,33 +24,33 @@
           )
 
           (defvar
-            tap-time 180
-            hold-time 200
+            tap-time 150
+            hold-time 150
           )
 
           (defalias
             ;; base layer aliases
             grv  (tap-hold $tap-time $hold-time grv (layer-toggle layers))
-            caps (tap-hold $tap-time $hold-time esc lalt)
             a    (tap-hold $tap-time $hold-time a ralt)
-            s    (tap-hold $tap-time $hold-time s lmet)
+            s    (tap-hold $tap-time $hold-time s lalt)
             d    (tap-hold $tap-time $hold-time d lsft)
             f    (tap-hold $tap-time $hold-time f lctl)
             j    (tap-hold $tap-time $hold-time j rctl)
             k    (tap-hold $tap-time $hold-time k rsft)
-            l    (tap-hold $tap-time $hold-time l rmet)
+            l    (tap-hold $tap-time $hold-time l lalt)
             ;    (tap-hold $tap-time $hold-time ; ralt)
-            '    (tap-hold $tap-time $hold-time ' lalt)
-            spc  (tap-hold $tap-time $hold-time spc (layer-toggle sys))
+            spc  (tap-hold $tap-time $hold-time spc lmet)
+            lalt  (tap-hold $tap-time $hold-time bspc (layer-toggle sys))
+            ralt  (tap-hold $tap-time $hold-time ret (layer-toggle sys))
           )
 
           (deflayer base
             esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 del
             @grv 1  2  3  4  5  6  7  8  9  0  -  =  bspc
             tab  q  w  e  r  t  y  u  i  o  p  [  ]  ret
-            @caps @a @s @d @f g  h  @j @k @l @; @' \
+            esc   @a @s @d @f g  h  @j @k @l @; '  \
             lsft ` z  x  c  v  b  n  m  ,  .  /     rsft
-            lctl  lmet bspc   @spc    ret  rctl
+            lctl  lmet @lalt   @spc    @ralt  rctl
           )
 
           (deflayer raw
@@ -64,7 +64,7 @@
 
           (defalias
             ;; sys layer aliases
-            ◀◀  (tap-hold $tap-time $hold-time ◀◀ lmet)
+            ◀◀  (tap-hold $tap-time $hold-time ◀◀ lalt)
             ▶⏸  (tap-hold $tap-time $hold-time ▶⏸ lsft)
             ▶▶  (tap-hold $tap-time $hold-time ▶▶ lctl)
             )
@@ -72,9 +72,9 @@
           (deflayer sys
             esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 del
             @grv 1  2  3  4  5  6  7  8  9  0  -  =  bspc
-            tab  q  🔇 🔉 🔊 🔆  ⇤  ⇟  ⇞  ⇥  p  [  ]  ret
-            @caps @a @◀◀ @▶⏸ @▶▶ 🔅  ◀  ▼  ▲  ▶   ;  '  \
-            lsft < z  x  c  v  b  n  m  ,  .  /     rsft
+            tab  XX 🔇 🔉 🔊 🔆  ⇤  ⇟  ⇞  ⇥  XX XX XX  ret
+            esc   XX @◀◀ @▶⏸ @▶▶ 🔅  ◀  ▼  ▲  ▶  XX XX  \
+            lsft XX XX XX XX XX XX XX XX XX XX XX    rsft
             lctl  lmet  lalt    spc     ralt  rctl
           )
 
