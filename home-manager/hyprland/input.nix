@@ -15,8 +15,8 @@
       kb_options = "shift:both_capslock";
       # kb_rules =
 
-      repeat_delay = 200;
-      repeat_rate = 25;
+      repeat_delay = 250;
+      repeat_rate = 35;
 
       follow_mouse = 1;
 
