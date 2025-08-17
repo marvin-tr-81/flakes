@@ -2,7 +2,7 @@
   imports = [
 
     ./hyprpaper.nix
-    # ./swayosd.nix
+    ./swayosd.nix
 
   ];
 }
