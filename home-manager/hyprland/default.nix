@@ -21,6 +21,7 @@
     ./input.nix
     ./keybindings.nix
     ./windows_and_workspaces.nix
+    ./ecosystem.nix
 
   ];
 
