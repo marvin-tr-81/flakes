@@ -115,6 +115,8 @@
       disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background. :(
 
       key_press_enables_dpms = true; # wake up the monitors if a key is pressed.
+
+      vrr = 1;
     };
   };
 }
