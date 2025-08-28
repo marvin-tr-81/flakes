@@ -1,9 +1,13 @@
 {
   services.logind = {
 
-    lidSwitch = "suspend";
-    lidSwitchExternalPower = "ignore";
-    lidSwitchDocked = "ignore";
+    settings.Login = {
+
+      HandleLidSwitch = "suspend";
+      HandleLidSwitchExternalPower = "ignore";
+      HandleLidSwitchDocked = "ignore";
+
+    };
 
   };
 }
