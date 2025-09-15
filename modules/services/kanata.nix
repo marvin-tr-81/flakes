@@ -31,14 +31,14 @@
           (defalias
             ;; base layer aliases
             grv  (tap-hold $tap-time $hold-time grv (layer-toggle layers))
-            a    (tap-hold $tap-time $hold-time a ralt)
-            s    (tap-hold $tap-time $hold-time s lalt)
+            a    (tap-hold $tap-time $hold-time a lalt)
+            s    (tap-hold $tap-time $hold-time s ralt)
             d    (tap-hold $tap-time $hold-time d lsft)
             f    (tap-hold $tap-time $hold-time f lctl)
             j    (tap-hold $tap-time $hold-time j rctl)
             k    (tap-hold $tap-time $hold-time k rsft)
-            l    (tap-hold $tap-time $hold-time l lalt)
-            ;    (tap-hold $tap-time $hold-time ; ralt)
+            l    (tap-hold $tap-time $hold-time l ralt)
+            ;    (tap-hold $tap-time $hold-time ; lalt)
             spc  (tap-hold $tap-time $hold-time spc lmet)
             lctl (layer-toggle nmpd)
             lalt (tap-hold $tap-time $hold-time bspc (layer-toggle sys))
@@ -74,7 +74,7 @@
             esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 del
             @grv 1  2  3  4  5  6  7  8  9  0  -  =  bspc
             tab  XX 🔇 🔉 🔊 🔆  ⇤  ⇟  ⇞  ⇥  XX XX XX  ret
-            esc   XX @◀◀ @▶⏸ @▶▶ 🔅  ◀  ▼  ▲  ▶  XX XX  \
+            esc   lalt @◀◀ @▶⏸ @▶▶ 🔅  ◀  ▼  ▲  ▶  XX XX  \
             lsft XX XX XX XX XX XX XX XX XX XX XX    rsft
             lctl  lmet  lalt    spc     ralt  rctl
           )
