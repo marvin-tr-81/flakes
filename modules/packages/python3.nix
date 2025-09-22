@@ -10,6 +10,8 @@
         pandas
         statsmodels
         scikitlearn
+        matplotlib
+        seaborn
       ]
     ))
   ];

@@ -116,7 +116,7 @@
 
       key_press_enables_dpms = true; # wake up the monitors if a key is pressed.
 
-      vrr = 1;
+      vrr = 0;
     };
   };
 }
