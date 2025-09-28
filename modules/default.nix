@@ -1,4 +1,10 @@
+{ config, ... }:
 {
+
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   imports = [
     ./systemConfigurations
     ./packages
@@ -15,4 +21,5 @@
     ./catppuccin.nix
     ./fonts.nix
   ];
+
 }
