@@ -6,5 +6,6 @@
     htop
     fastfetch
     ripgrep
+    zip
   ];
 }
