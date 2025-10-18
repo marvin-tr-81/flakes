@@ -1,4 +1,3 @@
-{ config, ... }:
 {
 
   nixpkgs.config = {
@@ -11,7 +10,7 @@
     ./nixvim
     ./services
     ./programs
-    ./virtualization
+    # ./virtualization
     ./gaming
     # ./stylix.nix
     ./users.nix
