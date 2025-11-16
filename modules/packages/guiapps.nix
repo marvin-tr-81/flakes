@@ -9,5 +9,6 @@
     sweethome3d.application
     qbittorrent
     chromium
+    yacreader
   ];
 }
