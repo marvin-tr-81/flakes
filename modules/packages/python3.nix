@@ -12,6 +12,7 @@
         scikit-learn
         matplotlib
         seaborn
+        textblob
       ]
     ))
   ];
