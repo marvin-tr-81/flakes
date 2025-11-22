@@ -9,7 +9,7 @@
         jupyterlab
         pandas
         statsmodels
-        scikitlearn
+        scikit-learn
         matplotlib
         seaborn
       ]
