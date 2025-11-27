@@ -13,6 +13,8 @@
         matplotlib
         seaborn
         textblob
+        wordcloud
+        imageio
       ]
     ))
   ];
