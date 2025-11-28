@@ -4,7 +4,7 @@
     settings.Login = {
 
       HandleLidSwitch = "suspend";
-      HandleLidSwitchExternalPower = "ignore";
+      HandleLidSwitchExternalPower = "suspend";
       HandleLidSwitchDocked = "ignore";
 
     };
