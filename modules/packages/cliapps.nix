@@ -7,5 +7,7 @@
     fastfetch
     ripgrep
     zip
+    wine
+    wine64
   ];
 }
