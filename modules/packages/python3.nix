@@ -12,9 +12,8 @@
         scikit-learn
         matplotlib
         seaborn
-        textblob
-        wordcloud
-        imageio
+        tensorflow
+        keras
       ]
     ))
   ];
