@@ -2,7 +2,7 @@
 {
 
   hardware = {
-    xone.enable = true;
+    # xone.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
