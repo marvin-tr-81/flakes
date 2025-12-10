@@ -17,6 +17,7 @@
       "$mainMod, RETURN, exec, $terminal"
       "$mainMod, Q, killactive,"
       "$mainMod, BACKSPACE, exec, $menu"
+      "$mainMod, SPACE, exec, $menu"
       # bind = $mainMod, M, exit,
       # "$mainMod, E, exec, $fileManager"
       # "$mainMod, I, exec, $internet"
