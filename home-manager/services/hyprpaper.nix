@@ -20,8 +20,20 @@
       # }
       # ];
 
-      preload = [ "~/wallhaven-vq898p.png" ];
-      wallpaper = [ ",~/wallhaven-vq898p.png" ];
+      # preload = [ "~/wallhaven-vq898p.png" ];
+      # wallpaper = [ ",~/wallhaven-vq898p.png" ];
+
+      ipc = "on";
+      splash = false;
+
+      # This generates the new block-style syntax
+      wallpaper = [
+        {
+          monitor = "";
+          path = "~/wallhaven-vq898p.png";
+          fit_mode = "cover";
+        }
+      ];
 
     };
 

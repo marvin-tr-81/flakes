@@ -14,14 +14,18 @@
       # "float,class:^(kitty)$,title:^(kitty)$"
 
       # Ignore maximize requests from apps. You'll probably like this.
-      "suppressevent maximize, class:.*"
+      # "suppressevent maximize, class:.*"
+      "match:class .*, suppress_event maximize"
 
       # Fix some dragging issues with XWayland
-      "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+      # "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
     ];
 
     windowrulev2 = [
+
+      # Fix some dragging issues with XWayland
+      "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
       # float Youtube Picture in picture
       "float, title:Picture-in-Picture$"
