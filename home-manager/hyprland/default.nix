@@ -5,7 +5,7 @@
     enable = true;
 
     plugins = [
-      pkgs.hyprlandPlugins.hyprbars
+      # pkgs.hyprlandPlugins.hyprbars
     ];
 
   };

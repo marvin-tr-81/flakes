@@ -1,7 +1,7 @@
 {
   imports = [
 
-    ./hyprbars.nix
+    # ./hyprbars.nix
 
   ];
 }
