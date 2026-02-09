@@ -83,8 +83,8 @@
           (deflayer nmpd
             ;; numpad layer
             esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 del
-            @grv 1  2  3  4  5 NumLock kp7 kp8 kp9 kp/ XX   XX  bspc
-            tab  q  w  e  r  t  XX kp4 kp5 kp6 kp* NumpadEqual XX ret 
+            @grv 1  2  3  4  5  6 NumLock kp7 kp8 kp9 kp/ XX     bspc
+            tab  q  w  e  r  t  XX kp4 kp5 kp6 kp* XX XX ret 
             caps  a  s  d  f  g  XX kp1 kp2 kp3 kp- XX   XX
             lsft < z  x  c  v  b  XX kp0 NumpadEqual kp. kp+ rsft
             lctl  lmet  bspc    spc     kprt  rctl
