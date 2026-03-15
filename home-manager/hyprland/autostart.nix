@@ -15,6 +15,7 @@
     exec-once = [
       "hyprpaper"
       # "swayosd-server"
+      "syshud"
     ];
   };
 }

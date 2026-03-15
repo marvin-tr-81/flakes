@@ -8,5 +8,6 @@
     # rofi-wayland
     fuzzel
     pwvucontrol
+    syshud
   ];
 }
