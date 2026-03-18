@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    (python313.withPackages (
+    (python314.withPackages (
       ps: with ps; [
         tkinter
         numpy
@@ -12,8 +12,8 @@
         scikit-learn
         matplotlib
         seaborn
-        tensorflow
-        keras
+        # tensorflow
+        # keras
       ]
     ))
   ];
