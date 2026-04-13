@@ -6,6 +6,8 @@
       nerd-fonts.jetbrains-mono
       dejavu_fonts
       noto-fonts-color-emoji
+      corefonts
+      vista-fonts
     ];
 
     fontconfig = {
