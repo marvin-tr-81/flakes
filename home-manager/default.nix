@@ -29,6 +29,7 @@
       ./kitty.nix
       ./services
       ./qt.nix
+      ./helix.nix
 
     ];
   };
