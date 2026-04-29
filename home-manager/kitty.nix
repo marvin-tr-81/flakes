@@ -4,7 +4,7 @@
     enable = true;
 
     font = {
-      size = 20;
+      size = 12;
       name = "mono";
     };
 
