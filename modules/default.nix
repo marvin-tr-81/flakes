@@ -7,7 +7,7 @@
   imports = [
     ./systemConfigurations
     ./packages
-    ./nixvim
+    # ./nixvim
     ./services
     ./programs
     # ./virtualization
