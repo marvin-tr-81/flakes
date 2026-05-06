@@ -3,6 +3,13 @@
 
   programs.helix = {
     enable = true;
+
+    extraPackages = with pkgs; [
+      texlab
+      ltex-ls
+      marksman # Optional: if you also edit markdown
+    ];
+
     languages = {
       language = [
         {
@@ -15,6 +22,11 @@
         {
           name = "nix";
           language-servers = [ "nixd" ];
+        }
+        {
+          name = "latex";
+          language-servers = [ "texlab" "ltex-ls" ];
+          auto-format = true;
         }
       ];
 
