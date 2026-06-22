@@ -28,6 +28,9 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Disable the network-online boot dependency
+  systemd.services.NetworkManager-wait-online.enable = false;
+
   networking.hostName = "marvin-framework"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
