@@ -102,10 +102,31 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
+  # SSD optimizations
+  fileSystems = {
+    "/".options = [ "noatime" "ssd" "discard=async" ];
+    "/home".options = [ "noatime" "ssd" "discard=async" ];
+    "/nix".options = [ "noatime" "ssd" "discard=async" ];
+    "/boot".options = [ "noatime" "nodiratime" "fmask=0077" "dmask=0077" "flush" ];
+  };
+  # Background continous garbage collection for blocks missed by async discard
+  services.fstrim.enable = true;
+
+  # Enable zram swap
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 100;
+  };
+
+  # Automatic Storage Maintenance
+  nix.gc = {
+    automatic = true;
+    dates = "weakly";
+    options = "--delete-older-than 14d";
+  };
+  nix.settings.auto-optimise-store = true;
+
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
