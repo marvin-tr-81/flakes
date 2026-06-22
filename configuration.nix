@@ -37,7 +37,11 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Istanbul";
+  # time.timeZone = "Europe/Istanbul";
+
+  # Set timezone automatically
+  services.automatic-timezoned.enable = true;
+  services.geoclue2.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
