@@ -2,16 +2,24 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -92,7 +100,10 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.marvin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     packages = with pkgs; [
       tree
@@ -108,7 +119,6 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    helix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -132,10 +142,28 @@
 
   # SSD optimizations
   fileSystems = {
-    "/".options = [ "noatime" "ssd" "discard=async" ];
-    "/home".options = [ "noatime" "ssd" "discard=async" ];
-    "/nix".options = [ "noatime" "ssd" "discard=async" ];
-    "/boot".options = [ "noatime" "nodiratime" "fmask=0077" "dmask=0077" "flush" ];
+    "/".options = [
+      "noatime"
+      "ssd"
+      "discard=async"
+    ];
+    "/home".options = [
+      "noatime"
+      "ssd"
+      "discard=async"
+    ];
+    "/nix".options = [
+      "noatime"
+      "ssd"
+      "discard=async"
+    ];
+    "/boot".options = [
+      "noatime"
+      "nodiratime"
+      "fmask=0077"
+      "dmask=0077"
+      "flush"
+    ];
   };
   # Background continous garbage collection for blocks missed by async discard
   services.fstrim.enable = true;
@@ -154,7 +182,6 @@
     options = "--delete-older-than 14d";
   };
   nix.settings.auto-optimise-store = true;
-
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
@@ -176,4 +203,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-

@@ -16,7 +16,35 @@
           insert = "bar";
           select = "underline";
         };
+
+        lsp = {
+          display-messages = true;
+          display-inlay-hints = true;
+        };
+
+        #     indent-guides = {
+        #       render = true;
+        #       character = ":";
+        #     };
       };
     };
+
+    languages = {
+      language = [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter = {
+            command = "nixfmt";
+          };
+          language-servers = [ "nil" ];
+        }
+      ];
+    };
   };
+
+  home.packages = with pkgs; [
+    nil # nix lsp
+    nixfmt # nix formatter
+  ];
 }
