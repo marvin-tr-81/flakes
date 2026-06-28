@@ -29,7 +29,8 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
 
-            home-manager.users.marvin = import ./home-manager;
+            home-manager.users.marvin = import ./home-manager/marvin;
+            home-manager.users.root = import ./home-manager/root;
           }
         ];
       };
