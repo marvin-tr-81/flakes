@@ -14,6 +14,8 @@
 
   networking.hostName = "marvin-framework"; # Define your hostname.
 
+  services.fwupd.enable = true;
+
   # SSD optimizations
   fileSystems = {
     "/".options = [
