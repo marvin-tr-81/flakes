@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../shared
+    ./configs
   ];
 
   home.username = "root";

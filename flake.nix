@@ -28,6 +28,8 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/marvin-framework
+            ./modules
+
             nixos-hardware.nixosModules.framework-11th-gen-intel
 
             home-manager.nixosModules.home-manager
@@ -36,8 +38,8 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit inputs; };
 
-              home-manager.users.marvin = import ./home-manager/marvin;
-              home-manager.users.root = import ./home-manager/root;
+              home-manager.users.marvin = import ./home-manager/marvin.nix;
+              home-manager.users.root = import ./home-manager/root.nix;
             }
           ];
         };
