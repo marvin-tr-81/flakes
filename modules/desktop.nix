@@ -8,8 +8,10 @@
 
   environment.systemPackages = with pkgs; [
     wl-clipboard
-    kitty
+    hyprlauncher
     hyprpwcenter
+
+    kitty
     firefox
   ];
 
