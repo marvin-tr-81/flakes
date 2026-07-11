@@ -69,6 +69,10 @@
       configDir = "/home/marvin/Documents/.config/syncthing";
       openDefaultPorts = true;
     };
+
+    kanata = {
+      enable = true;
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
