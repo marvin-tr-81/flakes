@@ -7,6 +7,8 @@
     ./tmux.nix
     ./btop.nix
     ./fastfetch.nix
+    ./mangohud.nix
+    ./lutris.nix
   ];
 
   home.stateVersion = "26.05";
