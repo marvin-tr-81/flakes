@@ -11,5 +11,9 @@
   environment.systemPackages = with pkgs; [
     heroic
     protonup-qt
+
+    (retroarch.withCores (cores: [
+      cores.fbneo
+    ]))
   ];
 }
