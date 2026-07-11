@@ -9,9 +9,17 @@
   programs.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
-    heroic
+    # heroic
     protonup-qt
-
+    (pkgs.heroic.override {
+      extraPkgs =
+        pkgs': with pkgs'; [
+          python3
+          curl
+          openssl
+          gnutls
+        ];
+    })
     (retroarch.withCores (cores: [
       cores.fbneo
     ]))
