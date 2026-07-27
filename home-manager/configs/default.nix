@@ -5,6 +5,7 @@
     ./fuzzel
     ./mpv
     ./yazi
+    ./zathura
     ./cursor.nix
     ./tmux.nix
     ./btop.nix
