@@ -16,6 +16,14 @@
 
     kitty
     firefox
+
+    libreoffice-fresh
+    hunspell
+    hunspellDicts.en_US
+    hunspellDicts.tr_TR
+    hunspellDicts.fr-moderne
+    hunspellDicts.pt_PT
+    hunspellDicts.pt_BR
   ];
 
   # Force electron apps to use Wayland natively
@@ -41,6 +49,11 @@
         emoji = [ "Noto Color Emoji" ];
       };
     };
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
 }
