@@ -1,0 +1,5 @@
+{
+  services.syshud = {
+    enable = true;
+  };
+}

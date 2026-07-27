@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./syshud
     ./helix
     ./cursor.nix
     ./tmux.nix

@@ -7,6 +7,10 @@
   };
 
   environment.systemPackages = with pkgs; [
+
+    brightnessctl
+    playerctl
+
     wl-clipboard
     hyprlauncher
     hyprpwcenter
