@@ -4,6 +4,7 @@
     ./helix
     ./fuzzel
     ./mpv
+    ./yazi
     ./cursor.nix
     ./tmux.nix
     ./btop.nix
