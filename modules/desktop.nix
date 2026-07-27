@@ -12,7 +12,6 @@
     playerctl
 
     wl-clipboard
-    hyprlauncher
     hyprpwcenter
 
     kitty

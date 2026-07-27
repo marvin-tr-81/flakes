@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-
 {
   imports = [
     ./syshud
     ./helix
+    ./fuzzel
     ./cursor.nix
     ./tmux.nix
     ./btop.nix
