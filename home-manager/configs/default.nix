@@ -3,6 +3,7 @@
     ./syshud
     ./helix
     ./fuzzel
+    ./mpv
     ./cursor.nix
     ./tmux.nix
     ./btop.nix
