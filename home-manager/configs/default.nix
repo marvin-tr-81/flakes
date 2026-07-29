@@ -6,6 +6,7 @@
     ./mpv
     ./yazi
     ./zathura
+    ./foot
     ./cursor.nix
     ./tmux.nix
     ./btop.nix
