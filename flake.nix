@@ -27,7 +27,7 @@
         marvin-framework = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/marvin-framework
+            ./hosts/marvin-framework/configuration.nix
             ./modules
 
             nixos-hardware.nixosModules.framework-11th-gen-intel
