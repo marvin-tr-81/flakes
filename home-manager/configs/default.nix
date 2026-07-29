@@ -1,13 +1,13 @@
 {
   imports = [
-    ./syshud
-    ./helix
-    ./fuzzel
-    ./mpv
-    ./yazi
-    ./zathura
-    ./foot
-    ./kitty
+    ./syshud.nix
+    ./helix.nix
+    ./fuzzel.nix
+    ./mpv.nix
+    ./yazi.nix
+    ./zathura.nix
+    ./foot.nix
+    ./kitty.nix
     ./cursor.nix
     ./tmux.nix
     ./btop.nix
