@@ -7,6 +7,7 @@
     ./yazi
     ./zathura
     ./foot
+    ./kitty
     ./cursor.nix
     ./tmux.nix
     ./btop.nix

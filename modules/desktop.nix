@@ -14,7 +14,6 @@
     wl-clipboard
     hyprpwcenter
 
-    kitty
     firefox
 
     libreoffice-fresh
