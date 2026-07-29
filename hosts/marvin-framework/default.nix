@@ -16,6 +16,10 @@
 
   services.fwupd.enable = true;
 
+  services.kanata.keyboards.internalKeyboard.devices = [
+    "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+  ];
+
   # SSD optimizations
   fileSystems = {
     "/".options = [
