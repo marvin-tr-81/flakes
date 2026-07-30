@@ -16,6 +16,8 @@
 
     firefox
 
+    keymapp
+
     libreoffice-fresh
     hunspell
     hunspellDicts.en_US

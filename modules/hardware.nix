@@ -9,6 +9,9 @@
   # Enable graphics
   hardware.graphics.enable = true;
 
+  # Enable ZSA keyboard
+  hardware.keyboard.zsa.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
