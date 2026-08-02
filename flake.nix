@@ -45,10 +45,10 @@
           ];
         };
 
-        marvin-thinkpadX1G14 = nixpkgs.lib.nixosSystem {
+        marvin-thinkpad = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/marvin-thinkpadX1G14/configuration.nix
+            ./hosts/marvin-thinkpad/configuration.nix
             ./modules
 
             nixos-hardware.nixosModules.lenovo-thinkpad-x1-13th-gen

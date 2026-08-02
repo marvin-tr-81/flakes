@@ -12,7 +12,7 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "marvin-thinkpadX1G14"; # Define your hostname.
+  networking.hostName = "marvin-thinkpad"; # Define your hostname.
 
   services.fwupd.enable = true;
 
