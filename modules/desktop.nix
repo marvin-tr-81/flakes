@@ -13,7 +13,7 @@
 
     hyprpolkitagent
     wl-clipboard
-    hyprpwcenter
+    pwvucontrol
 
     firefox
 
