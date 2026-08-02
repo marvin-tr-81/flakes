@@ -14,6 +14,7 @@
     ./fastfetch.nix
     ./mangohud.nix
     ./lutris.nix
+    ./hyprland.nix
   ];
 
   home.stateVersion = "26.05";
