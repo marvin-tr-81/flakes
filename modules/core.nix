@@ -69,7 +69,36 @@
       configDir = "/home/marvin/Documents/.config/syncthing";
       openDefaultPorts = true;
     };
+  };
 
+  # Disable conflicting power management services
+  services.power-profiles-daemon.enable = false;
+
+  # Enable TLP
+  services.tlp = {
+    enable = true;
+
+    settings = {
+      # CPU Performance & Power Scaling
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+
+      # Battery Charge Thresholds (ThinkPad / Supported Laptops)
+      # Keeps battery in health sweet-spot (e.g., 45% - 80%)
+      START_CHARGE_THRESH_BAT0 = 45; # Charge starts below 45%
+      STOP_CHARGE_THRESH_BAT0 = 80; # Charge stops at 80%
+
+      # Optional: Radio Device Management (WiFi/Bluetooth on dock/undock)
+      # DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth";
+
+      # PCI / USB Power Saving
+      NATACPI_ENABLE = 1;
+      TPACPI_ENABLE = 1;
+      TPSMAPI_ENABLE = 1;
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
