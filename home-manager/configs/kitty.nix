@@ -4,7 +4,7 @@
 
     # Set the default base font size
     settings = {
-      font_size = 20.0; # Set your preferred base font size here
+      font_size = 16.0; # Set your preferred base font size here
     };
 
     # Declarative keybindings mapped straight to kitty.conf
