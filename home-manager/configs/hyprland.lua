@@ -25,9 +25,9 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output   = "",
-    mode     = "preferred",
+    mode     = "highrr",
     position = "auto",
-    scale    = 1,
+    scale    = 1.5,
 })
 
 
@@ -217,6 +217,7 @@ hl.config({
     misc = {
         force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+        vrr                     = 2,
     },
 })
 
@@ -235,7 +236,7 @@ hl.config({
 
         follow_mouse = 1,
 
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0.5, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
             natural_scroll = true,
@@ -252,8 +253,8 @@ hl.gesture({
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
-    name        = "epic-mouse-v1",
-    sensitivity = -0.5,
+    name        = "tpps/2-elan-trackpoint",
+    sensitivity = 0.25,
 })
 
 
