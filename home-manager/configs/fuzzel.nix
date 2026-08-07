@@ -6,7 +6,7 @@
 
     settings = {
       main = {
-        font = lib.mkForce "monospace:size=12";
+        font = lib.mkForce "monospace:size=18";
       };
       key-bindings = {
         delete-line-forward = "none";
