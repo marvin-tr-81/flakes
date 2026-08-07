@@ -15,6 +15,7 @@
     ./mangohud.nix
     ./lutris.nix
     ./hyprland.nix
+    ./zsh.nix
   ];
 
   home.stateVersion = "26.05";
