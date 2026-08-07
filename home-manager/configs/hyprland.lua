@@ -297,8 +297,8 @@ for i = 1, 10 do
 end
 
 -- Switch workspaces with mainMod + Tab
-hl.bind(mainMod .. " + Tab",         hl.dsp.focus({ workspace = "+1"}))
-hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus({ workspace = "-1"}))
+hl.bind(mainMod .. " + Tab",         hl.dsp.focus({ workspace = "e+1"}))
+hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus({ workspace = "e-1"}))
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
