@@ -20,8 +20,12 @@
           gnutls
         ];
     })
-    (retroarch.withCores (cores: [
-      cores.fbneo
-    ]))
+    (retroarch.withCores (
+      cores: with cores; [
+        fbneo
+        snes9x
+        genesis-plus-gx
+      ]
+    ))
   ];
 }
