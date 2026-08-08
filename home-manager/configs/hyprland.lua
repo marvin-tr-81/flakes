@@ -399,7 +399,7 @@ hl.window_rule({
     name = "float steam setting",
     match = {
         class = "^steam$",
-        title = "negative:^(Steam|Steam Games List|Steam Big Picture Mode)$",
+        title = "negative:^(Steam|Steam Big Picture Mode)$",
     },
     float = true,
     center = true,
