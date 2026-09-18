@@ -7,5 +7,6 @@
     ./desktop.nix
     ./gaming.nix
     ./kanata.nix
+    ./devel.nix
   ];
 }
