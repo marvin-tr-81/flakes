@@ -60,6 +60,7 @@
     wget
     git
     zip
+    texliveFull
   ];
 
   services = {
