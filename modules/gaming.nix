@@ -25,6 +25,7 @@
         fbneo
         snes9x
         genesis-plus-gx
+        flycast
       ]
     ))
   ];
