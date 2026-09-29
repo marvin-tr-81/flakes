@@ -26,6 +26,8 @@
     hunspellDicts.fr-moderne
     hunspellDicts.pt_PT
     hunspellDicts.pt_BR
+
+    qbittorrent
   ];
 
   # Force electron apps to use Wayland natively
