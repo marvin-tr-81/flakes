@@ -60,6 +60,8 @@
     wget
     git
     zip
+    unzip
+    p7zip
     texliveFull
   ];
 
