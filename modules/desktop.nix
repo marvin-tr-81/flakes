@@ -16,10 +16,11 @@
     pwvucontrol
 
     firefox
+    qbittorrent
 
     keymapp
 
-    libreoffice-fresh
+    libreoffice
     hunspell
     hunspellDicts.en_US
     hunspellDicts.tr_TR
@@ -27,7 +28,7 @@
     hunspellDicts.pt_PT
     hunspellDicts.pt_BR
 
-    qbittorrent
+    texliveFull
   ];
 
   # Force electron apps to use Wayland natively

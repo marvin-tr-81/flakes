@@ -62,7 +62,6 @@
     zip
     unzip
     p7zip
-    texliveFull
   ];
 
   services = {
