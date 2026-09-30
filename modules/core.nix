@@ -64,6 +64,8 @@
     p7zip
   ];
 
+  services.flatpak.enable = true;
+
   services = {
     syncthing = {
       enable = true;
