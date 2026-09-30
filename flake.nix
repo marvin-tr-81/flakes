@@ -51,7 +51,7 @@
             ./hosts/marvin-thinkpad/configuration.nix
             ./modules
 
-            nixos-hardware.nixosModules.lenovo-thinkpad-x1-13th-gen
+            # nixos-hardware.nixosModules.lenovo-thinkpad-x1-13th-gen
 
             home-manager.nixosModules.home-manager
             {
