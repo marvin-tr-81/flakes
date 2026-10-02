@@ -10,6 +10,7 @@
         scipy
         statsmodels
         seaborn
+        scikit-learn
       ]
     ))
   ];
