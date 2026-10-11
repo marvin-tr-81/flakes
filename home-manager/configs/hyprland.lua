@@ -24,8 +24,15 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "",
+    output   = "eDP-1",
     mode     = "highrr",
+    position = "auto",
+    scale    = 1.5,
+})
+
+hl.monitor({
+    output   = "",
+    mode     = "highres",
     position = "auto",
     scale    = 1.5,
 })
@@ -225,6 +232,7 @@ hl.config({
         force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
         vrr                     = 3,     -- 0 - off, 1 - on, 2 - fullscreen only, 3 - fullscreen with video or game content type
+        key_press_enables_dpms  = true,
     },
 })
 
@@ -270,6 +278,7 @@ hl.device({
 ---------------------
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local shiftMod = mainMod .. " + SHIFT"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
@@ -333,6 +342,24 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+-- Bind Super+Shift+Escape to globally disable displays
+hl.bind(shiftMod .. " + ESCAPE", hl.dsp.exec_cmd("sleep 0.5 && hyprctl dispatch \"hl.dsp.dpms({ action = 'disable' })\""))
+
+-- Disable laptop screen when lid is closed
+hl.bind("switch:on:Lid Switch", function()
+    hl.monitor({ output = "eDP-1", disabled = true })
+end, { locked = true })
+
+-- Re-enable laptop screen with custom settings when lid is opened
+hl.bind("switch:off:Lid Switch", function()
+    hl.monitor({ 
+        output = "eDP-1", 
+        mode = "highrr", 
+        position = "auto", 
+        scale = 1.5,
+        disabled = false 
+    })
+end, { locked = true })
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
