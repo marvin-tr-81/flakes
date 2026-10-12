@@ -62,17 +62,14 @@
 
           (defalias
             ;; sys layer aliases
-            ◀◀  (tap-hold $tap-time $hold-time ◀◀ lmet)
-            ▶⏸  (tap-hold $tap-time $hold-time ▶⏸ lsft)
-            ▶▶  (tap-hold $tap-time $hold-time ▶▶ lctl)
             )
 
           (deflayer sys
-            @grv 1  2  3  4  5  6  7  8  9  0  -  =   bspc
-            tab   XX 🔇 🔉 🔊 🔆 ssrq ins del pause XX XX XX ret
-            esc    lalt @◀◀ @▶⏸ @▶▶ 🔅 ◀  ▼  ▲  ▶ XX XX  \
-            lsft XX XX XX XX XX XX      ⇤  ⇟  ⇞  ⇥ XX  rsft
-            lctl  lmet  lalt    spc     ralt  rctl
+            @grv 1  2    3    4    5     6    7   8   9     0  -  =  bspc
+            tab   XX 🔇   🔉   🔊   🔆    ssrq del ins pause XX XX XX ret
+            esc    XX lmet lsft lctl lalt  ◀    ▼   ▲   ▶     XX XX \
+            lsft XX XX ◀◀   ▶⏸   ▶▶   🔅    ⇤    ⇟   ⇞   ⇥     XX    rsft
+            lctl  lmet  lalt          spc            ralt  rctl
           )
 
           (defalias
@@ -97,7 +94,7 @@
             S-grv S-1 S-2 [   ]   S-7 +  7  8  9  S-8 [   ]   ret
             caps   S-3 @$  @lp @rp @\  -  4  5  6  =   S-\ \
             lsft <  S-5 S-6 S-[ S-] S-- 0  1  2  3  S-8      rsft
-            lctl  lmet  del    spc     tab  rctl
+            lctl  lmet  del         spc     tab  rctl
           )
 
           (defalias
@@ -108,10 +105,10 @@
 
           (deflayer layers
             grv @base @raw 3  4  5  6  7  8  9  0  -  =  bspc
-            tab  q  w  e  r  t  y  u  i  o  p  [  ]  ret
-            caps  a  s  d  f  g  h  j  k  l  ;  '  \
-            lsft < z  x  c  v  b  n  m  ,  .  /     rsft
-            lctl  lmet  lalt    spc     ralt  rctl
+            tab  q     w    e  r  t  y  u  i  o  p  [  ]  ret
+            caps  a     s    d  f  g  h  j  k  l  ;  '  \
+            lsft < z     x    c  v  b  n  m  ,  .  /     rsft
+            lctl  lmet  lalt        spc     ralt  rctl
           )
 
         '';
