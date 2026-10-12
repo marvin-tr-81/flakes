@@ -94,9 +94,9 @@
 
           (deflayer symnum
             @grv f1  f2  f3  f4  f5  f6 f7 f8 f9 f10 f11 f12 bspc
-            S-grv S-1 S-2 [   ]   S-7 =  7  8  9  S-8 [   ]   ret
-            caps   S-3 @$  @lp @rp @\  -  4  5  6  +   S-\ \
-            lsft <  S-5 S-6 S-[ S-] S-- 0  1  2  3  \        rsft
+            S-grv S-1 S-2 [   ]   S-7 +  7  8  9  S-8 [   ]   ret
+            caps   S-3 @$  @lp @rp @\  -  4  5  6  =   S-\ \
+            lsft <  S-5 S-6 S-[ S-] S-- 0  1  2  3  S-8      rsft
             lctl  lmet  del    spc     tab  rctl
           )
 
