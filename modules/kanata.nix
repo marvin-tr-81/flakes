@@ -29,6 +29,7 @@
           (defalias
             ;; base layer aliases
             grv  (tap-hold $tap-time $hold-time grv (layer-toggle layers))
+            cw   (caps-word 2000)
             a    (tap-hold $tap-time $hold-time a ralt)
             s    (tap-hold $tap-time $hold-time s lmet)
             d    (tap-hold $tap-time $hold-time d lsft)
@@ -46,7 +47,7 @@
 
           (deflayer base
             @grv 1  2  3  4  5  6  7  8  9  0  -  =   bspc
-            tab   q  w  e  r  t  y  u  i  o  p  [  ]   ret
+            @cw   q  w  e  r  t  y  u  i  o  p  [  ]   ret
             esc    @a @s @d @f @g @h @j @k @l @; '  \
             lsft grv z  x  c  v  b  n  m  ,  .  /     rsft
             lctl  lmet @lalt  @spc     @ralt  rctl
