@@ -345,12 +345,31 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- Bind Super+Shift+Escape to globally disable displays
 hl.bind(shiftMod .. " + ESCAPE", hl.dsp.exec_cmd("sleep 0.5 && hyprctl dispatch \"hl.dsp.dpms({ action = 'disable' })\""))
 
--- Disable laptop screen when lid is closed
+-- Helper function to check if any external monitor is connected alongside eDP-1
+local function has_external_monitor()
+    local handle = io.popen("grep -l connected /sys/class/drm/card*-*/status 2>/dev/null")
+    if not handle then return false end
+    local result = handle:read("*a")
+    handle:close()
+
+    for path in result:gmatch("[^\r\n]+") do
+        -- If any connected display path does not belong to eDP, an external monitor is active
+        if not path:match("eDP-1") then
+            return true
+        end
+    end
+    return false
+end
+
+-- Lid Open Event
 hl.bind("switch:on:Lid Switch", function()
-    hl.monitor({ output = "eDP-1", disabled = true })
+    if has_external_monitor() then
+        hl.monitor({ output = "eDP-1", disabled = true })
+    end
+    -- hl.monitor({ output = "eDP-1", disabled = true })
 end, { locked = true })
 
--- Re-enable laptop screen with custom settings when lid is opened
+-- Lid Open Event
 hl.bind("switch:off:Lid Switch", function()
     hl.monitor({ 
         output = "eDP-1", 
