@@ -346,21 +346,21 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 hl.bind(shiftMod .. " + ESCAPE", hl.dsp.exec_cmd("sleep 0.5 && hyprctl dispatch \"hl.dsp.dpms({ action = 'disable' })\""))
 
 
--- Lid Close Event: Disable eDP-1
-hl.bind("switch:on:Lid Switch", function()
-    hl.monitor({ output = "eDP-1", disabled = true })
-end, { locked = true })
+-- -- Lid Close Event: Disable eDP-1
+-- hl.bind("switch:on:Lid Switch", function()
+--     hl.monitor({ output = "eDP-1", disabled = true })
+-- end, { locked = true })
 
--- Lid Open Event: Enable eDP-1
-hl.bind("switch:off:Lid Switch", function()
-    hl.monitor({
-        output = "eDP-1",
-        mode = "highrr",
-        position = "auto",
-        scale = 1.5,
-        disabled = false
-    })
-end, { locked = true })
+-- -- Lid Open Event: Enable eDP-1
+-- hl.bind("switch:off:Lid Switch", function()
+--     hl.monitor({
+--         output = "eDP-1",
+--         mode = "highrr",
+--         position = "auto",
+--         scale = 1.5,
+--         disabled = false
+--     })
+-- end, { locked = true })
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
