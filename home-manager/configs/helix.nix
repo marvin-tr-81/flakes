@@ -41,6 +41,11 @@
           };
           language-servers = [ "nil" ];
         }
+        {
+          name = "lua";
+          auto-format = true;
+          language-servers = [ "lua-language-server" ];
+        }
       ];
     };
   };
@@ -48,5 +53,6 @@
   home.packages = with pkgs; [
     nil # nix lsp
     nixfmt # nix formatter
+    lua-language-server # lua lsp
   ];
 }
