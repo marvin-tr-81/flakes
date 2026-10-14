@@ -450,3 +450,13 @@ hl.window_rule({
   float = true,
   center = true,
 })
+
+hl.window_rule({
+  name = "float dosbox-staging",
+  match = {
+    class = "org.dosbox_staging.dosbox_staging",
+  },
+  float = true,
+  center = true,
+  size = "1280 960",
+})
