@@ -46,6 +46,21 @@
           auto-format = true;
           language-servers = [ "lua-language-server" ];
         }
+        {
+          name = "python";
+          auto-format = true;
+          formatter = {
+            command = "ruff";
+            args = [
+              "format"
+              "-"
+            ];
+          };
+          language-servers = [
+            "ty"
+            "ruff"
+          ];
+        }
       ];
     };
   };
@@ -54,5 +69,7 @@
     nil # nix lsp
     nixfmt # nix formatter
     lua-language-server # lua lsp
+    ty # python lsp
+    ruff # python formatter and linter
   ];
 }
