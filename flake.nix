@@ -25,26 +25,6 @@
     {
       nixosConfigurations = {
 
-        marvin-framework = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/marvin-framework/configuration.nix
-            ./modules
-
-            nixos-hardware.nixosModules.framework-11th-gen-intel
-
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-
-              home-manager.users.marvin = import ./home-manager/marvin.nix;
-              home-manager.users.root = import ./home-manager/root.nix;
-            }
-          ];
-        };
-
         marvin-thinkpad = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
