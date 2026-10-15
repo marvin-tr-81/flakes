@@ -53,7 +53,15 @@
                 catppuccin.enable = true;
               };
 
-              home-manager.users.root = import ./home-manager/root.nix;
+              home-manager.users.root = {
+                imports = [
+                  ./home-manager/root.nix
+                  catppuccin.homeModules.catppuccin
+                ];
+                catppuccin.enable = true;
+              };
+
+              # home-manager.users.root = import ./home-manager/root.nix;
             }
           ];
         };
