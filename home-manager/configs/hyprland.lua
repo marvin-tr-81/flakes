@@ -254,6 +254,7 @@ hl.config({
 
     touchpad     = {
       natural_scroll = true,
+      drag_lock = 2, --  0 - disabled, 1 - enabled with timeout, 2 - enabled sticky.
     },
   },
 })
