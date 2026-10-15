@@ -45,10 +45,14 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit inputs; };
 
-              home-manager.users.marvin.imports = [
-                ./home-manager/marvin.nix
-                catppuccin.homeModules.catppuccin
-              ];
+              home-manager.users.marvin = {
+                imports = [
+                  ./home-manager/marvin.nix
+                  catppuccin.homeModules.catppuccin
+                ];
+                catppuccin.enable = true;
+              };
+
               home-manager.users.root = import ./home-manager/root.nix;
             }
           ];
