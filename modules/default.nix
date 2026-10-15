@@ -8,5 +8,6 @@
     ./gaming.nix
     ./kanata.nix
     ./devel.nix
+    ./catppuccin.nix
   ];
 }
