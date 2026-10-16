@@ -45,23 +45,24 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit inputs; };
 
-              home-manager.users.marvin = {
-                imports = [
-                  ./home-manager/marvin.nix
-                  catppuccin.homeModules.catppuccin
-                ];
-                catppuccin.enable = true;
-              };
+              # home-manager.users.marvin = {
+              # imports = [
+              # ./home-manager/marvin.nix
+              # catppuccin.homeModules.catppuccin
+              # ];
+              # catppuccin.enable = true;
+              # };
 
-              home-manager.users.root = {
-                imports = [
-                  ./home-manager/root.nix
-                  catppuccin.homeModules.catppuccin
-                ];
-                catppuccin.enable = true;
-              };
+              # home-manager.users.root = {
+              # imports = [
+              # ./home-manager/root.nix
+              # catppuccin.homeModules.catppuccin
+              # ];
+              # catppuccin.enable = true;
+              # };
 
-              # home-manager.users.root = import ./home-manager/root.nix;
+              home-manager.users.marvin = import ./home-manager/marvin.nix;
+              home-manager.users.root = import ./home-manager/root.nix;
             }
           ];
         };

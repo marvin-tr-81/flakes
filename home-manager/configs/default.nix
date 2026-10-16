@@ -1,5 +1,10 @@
 {
+  inputs,
+  ...
+}:
+{
   imports = [
+    inputs.catppuccin.homeModules.catppuccin
     ./syshud.nix
     ./helix.nix
     ./fuzzel.nix
@@ -18,8 +23,14 @@
     ./zsh.nix
   ];
 
-  home.backupFileExtension = "backup";
+  catppuccin = {
+    enable = true;
+    autoEnable = true;
+  };
+  # catppuccin.enable = true;
+  # catppuccin.autoEnable = true;
 
+  home.backupFileExtension = "backup";
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
