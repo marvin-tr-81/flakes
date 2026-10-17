@@ -49,7 +49,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
+local terminal    = "footclient"
 local fileManager = "dolphin"
 local menu        = "fuzzel"
 
