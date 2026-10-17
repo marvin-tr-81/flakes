@@ -17,6 +17,7 @@
     ./hyprland.nix
     ./zsh.nix
     ./catppuccin.nix
+    ./gtk.nix
   ];
 
   home.backupFileExtension = "backup";
