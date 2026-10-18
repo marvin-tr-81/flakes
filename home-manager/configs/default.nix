@@ -18,6 +18,7 @@
     ./zsh.nix
     ./catppuccin.nix
     ./gtk.nix
+    ./qt.nix
   ];
 
   home.backupFileExtension = "backup";
