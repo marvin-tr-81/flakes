@@ -5,7 +5,7 @@
 
     settings = {
       main = {
-        font = "JetBrains Mono:size=16";
+        font = "JetBrains Mono:size=14.5";
         term = "foot";
       };
       # cursor = {
