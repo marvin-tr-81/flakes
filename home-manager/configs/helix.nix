@@ -12,6 +12,7 @@
         line-number = "relative";
         cursorline = true;
         color-modes = true;
+        text-width = 80;
 
         cursor-shape = {
           normal = "block";
@@ -24,10 +25,10 @@
           display-inlay-hints = true;
         };
 
-        #     indent-guides = {
-        #       render = true;
-        #       character = ":";
-        #     };
+        indent-guides = {
+          render = true;
+          character = "┊";
+        };
       };
     };
 
@@ -61,7 +62,45 @@
             "ruff"
           ];
         }
+        {
+          name = "latex";
+          auto-format = true;
+          language-servers = [ "texlab" ];
+        }
+        {
+          name = "bibtex";
+          auto-format = true;
+          formatter = {
+            command = "bibtex-tidy";
+            args = [ "-" ];
+          };
+          language-servers = [ "texlab" ];
+        }
       ];
+
+      language-server.texlab = {
+        command = "texlab";
+        config.texlab = {
+          build = {
+            onSave = true;
+            executable = "latexmk";
+            args = [
+              "-pdf"
+              "-interaction=nonstopmode"
+              "-synctex=1"
+              "%f"
+            ];
+          };
+          forwardSearch = {
+            executable = "zathura";
+            args = [
+              "--synctex-forward"
+              "%l:%c:%p"
+              "%p"
+            ];
+          };
+        };
+      };
     };
   };
 
@@ -71,5 +110,7 @@
     lua-language-server # lua lsp
     ty # python lsp
     ruff # python formatter and linter
+    texlab # latex and bibtex lsp
+    bibtex-tidy # bibtex formatter
   ];
 }
