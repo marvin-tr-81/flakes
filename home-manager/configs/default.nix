@@ -19,6 +19,7 @@
     ./catppuccin.nix
     ./gtk.nix
     ./qt.nix
+    ./hyprpaper.nix
   ];
 
   home.backupFileExtension = "backup";
