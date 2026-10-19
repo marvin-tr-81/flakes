@@ -74,12 +74,19 @@
             command = "bibtex-tidy";
             args = [ "-" ];
           };
-          language-servers = [ "texlab" ];
+          language-servers = [
+            "texlab"
+            "bibtex-tidy"
+          ];
         }
         {
           name = "markdown";
-          language-servers = [ "marksman" ];
           auto-format = true;
+          formatter = {
+            command = "marksman";
+            args = [ "server" ];
+          };
+          language-servers = [ "marksman" ];
         }
       ];
 
@@ -104,10 +111,6 @@
               "%p"
             ];
           };
-        };
-        language-server.marksman = {
-          command = "marksman";
-          args = [ "server" ];
         };
       };
     };
