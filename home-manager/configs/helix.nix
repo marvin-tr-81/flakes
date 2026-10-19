@@ -76,6 +76,11 @@
           };
           language-servers = [ "texlab" ];
         }
+        {
+          name = "markdown";
+          language-servers = [ "marksman" ];
+          auto-format = true;
+        }
       ];
 
       language-server.texlab = {
@@ -100,6 +105,10 @@
             ];
           };
         };
+        language-server.marksman = {
+          command = "marksman";
+          args = [ "server" ];
+        };
       };
     };
   };
@@ -112,5 +121,6 @@
     ruff # python formatter and linter
     texlab # latex and bibtex lsp
     bibtex-tidy # bibtex formatter
+    marksman # markdown lsp
   ];
 }
