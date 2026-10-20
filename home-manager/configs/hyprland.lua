@@ -247,7 +247,7 @@ hl.config({
     kb_layout    = "tr",
     kb_variant   = "alt",
     kb_model     = "",
-    kb_options   = "caps:escape",
+    kb_options   = "",
     kb_rules     = "",
 
     follow_mouse = 1,
