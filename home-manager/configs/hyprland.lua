@@ -259,6 +259,11 @@ hl.config({
       drag_lock = 2, --  0 - disabled, 1 - enabled with timeout, 2 - enabled sticky.
     },
   },
+  cursor = {
+    inactive_timeout = 3,
+    hide_on_key_press = true,
+    hide_on_touch = true,
+  }
 })
 
 hl.gesture({
