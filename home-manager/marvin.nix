@@ -5,7 +5,7 @@
 {
   imports = [
     ./configs
-    # inputs.catppuccin.homeModules.catppuccin
+    ./scripts
   ];
 
   # catppuccin.enable = true;
