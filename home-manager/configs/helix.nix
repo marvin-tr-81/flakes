@@ -97,7 +97,7 @@
             onSave = true;
             executable = "latexmk";
             args = [
-              "-pdf"
+              "-lualatex"
               "-interaction=nonstopmode"
               "-synctex=1"
               "%f"
