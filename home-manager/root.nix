@@ -1,6 +1,7 @@
 {
   imports = [
     ./configs
+    ./scripts
   ];
 
   # catppuccin.enable = true;
