@@ -9,6 +9,7 @@
     shellAliases = {
       la = "ls -lha";
       ll = "ls -lh";
+      open = "xdg-open";
     };
 
     initContent = ''
