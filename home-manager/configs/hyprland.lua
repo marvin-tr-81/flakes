@@ -24,7 +24,7 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
   output   = "eDP-1",
-  mode     = "highrr",
+  mode     = "preferred",
   position = "auto",
   scale    = 1.5,
 })
@@ -374,7 +374,7 @@ end, { locked = true })
 hl.bind("switch:off:Lid Switch", function()
   hl.monitor({
     output = "eDP-1",
-    mode = "highrr",
+    mode = "preferred",
     position = "auto",
     scale = 1.5,
     disabled = false
