@@ -10,6 +10,7 @@
       la = "ls -lha";
       ll = "ls -lh";
       open = "xdg-open";
+      dosbox = "flatpak run io.github.dosbox-staging";
     };
 
     initContent = ''
