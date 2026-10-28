@@ -88,12 +88,16 @@
             lp (tap-hold $tap-time $hold-time S-9 lsft)
             rp (tap-hold $tap-time $hold-time S-0 lctl)
             \ (tap-hold $tap-time $hold-time \ lalt)
+            - (tap-hold $tap-time $hold-time - lalt)
+            4 (tap-hold $tap-time $hold-time 4 rctl)
+            5 (tap-hold $tap-time $hold-time 5 rsft)
+            6 (tap-hold $tap-time $hold-time 6 rmet)
           )
 
           (deflayer symnum
             @grv f1  f2  f3  f4  f5  f6 f7 f8 f9 f10 f11 f12 bspc
             S-grv S-1 S-2 [   ]   S-7 +  7  8  9  S-8 [   ]   ret
-            caps   S-3 @$  @lp @rp @\  -  4  5  6  =   S-\ \
+            caps   S-3 @$  @lp @rp @\  @- @4 @5 @6 =   S-\ \
             lsft <  S-5 S-6 S-[ S-] S-- 0  1  2  3  S-8      rsft
             lctl  lmet  del         spc     tab  rctl
           )
