@@ -20,6 +20,7 @@
     ./gtk.nix
     ./qt.nix
     ./hyprpaper.nix
+    ./starship.nix
   ];
 
   home.backupFileExtension = "backup";
