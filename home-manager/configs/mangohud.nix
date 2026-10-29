@@ -4,7 +4,9 @@
 
     settings = {
       preset = 2;
-      no_display = true;
+      # no_display = true;
     };
   };
+
+  catppuccin.mangohud.enable = false;
 }
