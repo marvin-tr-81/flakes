@@ -12,7 +12,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 0;
 
-  boot.initrd.verbose = true;
+  # boot.initrd.verbose = true;
   boot.initrd.compressor = "zstd";
 
   boot.kernelParams = [
