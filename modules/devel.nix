@@ -11,6 +11,7 @@
         statsmodels
         seaborn
         scikit-learn
+        mlxtend
       ]
     ))
   ];
