@@ -62,6 +62,7 @@
     zip
     unzip
     p7zip
+    zapp
   ];
 
   services.flatpak.enable = true;
