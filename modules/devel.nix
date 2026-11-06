@@ -12,6 +12,7 @@
         seaborn
         scikit-learn
         mlxtend
+        xgboost
       ]
     ))
   ];
